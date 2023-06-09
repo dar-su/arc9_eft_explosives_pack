@@ -134,20 +134,28 @@ function ENT:Detonate()
 
         local potentionalcontusioned = ents.FindInSphere(selfpos, shakeradiusM / 0.0254)
         for i = 1, #potentionalcontusioned do
-            if potentionalcontusioned[i]:IsPlayer() then
-                local ply = potentionalcontusioned[i]
+            local ply = potentionalcontusioned[i]
 
+            if ply:IsPlayer() or ply:IsNPC() then
                 local contmult = (shakeradiusM - selfpos:Distance(ply:GetPos()) * 0.0254) / shakeradiusM * 2 -- how close we are
 
-                net.Start("arc9eftexplosion")
-                net.WriteFloat(contmult)
-                net.WriteUInt(contusionLength, 9)
-                net.WriteBool(true) -- flashbanga
-                net.WriteEntity(self) -- flashbanga
-                net.Send(ply)
+                if ply:IsPlayer() then
+                    net.Start("arc9eftexplosion")
+                    net.WriteFloat(contmult)
+                    net.WriteUInt(contusionLength, 9)
+                    net.WriteBool(true) -- flashbanga
+                    net.WriteEntity(self) -- flashbanga
+                    net.Send(ply)
 
-
-                ply:ViewPunch(Angle(1, 0, -5) * contmult)
+                    ply:ViewPunch(Angle(1, 0, -5) * contmult)
+                else
+                    ply:SetNPCState(NPC_STATE_PLAYDEAD)
+    
+                    timer.Simple(contmult * contusionLength * 0.5, function()
+                        if not IsValid(ply) then return end
+                        ply:SetNPCState(NPC_STATE_IDLE)
+                    end)
+                end
             end
         end
     end
@@ -168,7 +176,7 @@ function ENT:Detonate()
             Src = self:GetPos(),
             Callback = function(att, tr, dmg)
                 if self.Scorch then
-                    util.Decal("Scorch", tr.StartPos, tr.HitPos - (tr.HitNormal * 16), self)
+                    util.Decal("FadingScorch", tr.StartPos, tr.HitPos - (tr.HitNormal * 16), self)
                 end
             end
         })
