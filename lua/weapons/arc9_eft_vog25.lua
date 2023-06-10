@@ -7,32 +7,32 @@ SWEP.SubCategory = "_Not for your eyes"
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = ARC9:GetPhrase("eft_weapon_zarya") or "Zarya"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_stun") or "Stun grenade"
-SWEP.Description = [[Intended to suppress the mental stability by creating a sudden sound effect and a bright flash. Used in special operations for apprehension of criminals and in riot suppression.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_vog25") or "VOG-25 Khattabka"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_improvised_grenade") or "Improvised hand grenade"
+SWEP.Description = [[The "Khattabka" hand-made hand grenade based on the VOG-25 grenade launcher shell. The grenade is a VOG-25 shell with a removed head part containing a detonator and self-destructor. A short fuse has been installed to speed up the ignition. An extremely deadly grenade.]]
 
-SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_zarya.mdl"
+SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_vog25.mdl"
 SWEP.WorldModel = "models/weapons/w_eq_fraggrenade.mdl"
 
-SWEP.ShootEnt = "arc9_eft_grenade_zarya"
+SWEP.ShootEnt = "arc9_eft_grenade_vog25"
 SWEP.Ammo = "grenade"
 
-SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/zarya_skoba.mdl"
+SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/vog25_skoba.mdl"
 
 SWEP.ReloadHideBoneTables = {
     [1] = {
         "weapon",
-        "skoba",
-        "ring",
-        "pin",
-        "pin_r",
-        "pin_l",
+        "weapon_skoba",
+        "weapon_ring",
+        "weapon_pin",
+        "weapon_pin_r",
+        "weapon_pin_l",
     },    
     [2] = {
-        "ring",
-        "pin",
-        "pin_r",
-        "pin_l",
+        "weapon_ring",
+        "weapon_pin",
+        "weapon_pin_r",
+        "weapon_pin_l",
     },
 }
 

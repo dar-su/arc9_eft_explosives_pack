@@ -7,17 +7,17 @@ SWEP.SubCategory = "_Not for your eyes"
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = ARC9:GetPhrase("eft_weapon_zarya") or "Zarya"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_stun") or "Stun grenade"
-SWEP.Description = [[Intended to suppress the mental stability by creating a sudden sound effect and a bright flash. Used in special operations for apprehension of criminals and in riot suppression.]]
+SWEP.PrintName = "M7290"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_flashbang") or "Flash Bang grenade"
+SWEP.Description = [[Model 7290 is a standard distracting explosive device. Produces 175 dB and a powerful light flash.]]
 
-SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_zarya.mdl"
+SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_m7920.mdl"
 SWEP.WorldModel = "models/weapons/w_eq_fraggrenade.mdl"
 
-SWEP.ShootEnt = "arc9_eft_grenade_zarya"
+SWEP.ShootEnt = "arc9_eft_grenade_m7290"
 SWEP.Ammo = "grenade"
 
-SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/zarya_skoba.mdl"
+SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/m7920_skoba.mdl"
 
 SWEP.ReloadHideBoneTables = {
     [1] = {
@@ -74,7 +74,7 @@ SWEP.Animations = {
         },
     },
     ["inspect"] = {
-        Source = "look",
+        Source = {"look", "check"},
     },
     ["pullpin"] = {
         Source = "fire_start",

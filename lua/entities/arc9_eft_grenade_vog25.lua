@@ -3,20 +3,20 @@ ENT.Type 				= "anim"
 ENT.Base 				= "arc9_eft_grenade_base"
 ENT.Spawnable 			= false
 
-if CLIENT then killicon.Add("arc9_eft_grenade_rgd5", "vgui/killicons/arc9_eft_rgd5", Color(255, 255, 255)) end
+if CLIENT then killicon.Add("arc9_eft_grenade_vog25", "vgui/killicons/arc9_eft_vog25", Color(255, 255, 255)) end
 
-ENT.PrintName  = "RGD-5 hand grenade"
-ENT.Model = "models/weapons/arc9/darsu_eft/w_rgd5.mdl"
-ENT.LifeTime = 3.5
+ENT.PrintName  = "VOG-25 Khattabka"
+ENT.Model = "models/weapons/arc9/darsu_eft/w_vog25.mdl"
+ENT.LifeTime = 2
 
-ENT.dmg = 200
-ENT.dmgradiusminM = 3 * 2
+ENT.dmg = 150
+ENT.dmgradiusminM = 2 * 2
 ENT.dmgradiusmaxM = 7 * 1.5
-ENT.shakeradiusM = 15
+ENT.shakeradiusM = 8
 ENT.contusionLength = 10
 
-ENT.shrapnelcount = 70
-ENT.shrapneldmg = 55
+ENT.shrapnelcount = 35
+ENT.shrapneldmg = 40
 
 ENT.ExplodeOnImpact = false
 

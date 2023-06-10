@@ -7,32 +7,32 @@ SWEP.SubCategory = "_Not for your eyes"
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = ARC9:GetPhrase("eft_weapon_zarya") or "Zarya"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_stun") or "Stun grenade"
-SWEP.Description = [[Intended to suppress the mental stability by creating a sudden sound effect and a bright flash. Used in special operations for apprehension of criminals and in riot suppression.]]
+SWEP.PrintName = "M18"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_smoke") or "Smoke grenade"
+SWEP.Description = [[The M18 smoke grenade made in the USA. Used in the US Army since the Second World War. The smoke is green-colored.]]
 
-SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_zarya.mdl"
+SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_m18.mdl"
 SWEP.WorldModel = "models/weapons/w_eq_fraggrenade.mdl"
 
-SWEP.ShootEnt = "arc9_eft_grenade_zarya"
+SWEP.ShootEnt = "arc9_eft_grenade_m18"
 SWEP.Ammo = "grenade"
 
-SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/zarya_skoba.mdl"
+SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/m18_skoba.mdl"
 
 SWEP.ReloadHideBoneTables = {
     [1] = {
         "weapon",
-        "skoba",
-        "ring",
-        "pin",
-        "pin_r",
-        "pin_l",
+        "weapon_skoba",
+        "weapon_ring",
+        "weapon_pin",
+        "weapon_pin_r",
+        "weapon_pin_l",
     },    
     [2] = {
-        "ring",
-        "pin",
-        "pin_r",
-        "pin_l",
+        "weapon_ring",
+        "weapon_pin",
+        "weapon_pin_r",
+        "weapon_pin_l",
     },
 }
 
