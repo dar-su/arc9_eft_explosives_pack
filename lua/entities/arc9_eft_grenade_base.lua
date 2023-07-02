@@ -14,6 +14,10 @@ ENT.PhysMat = "grenade"
 ENT.LifeTime = 3.5
 ENT.ExplodeOnImpact = false
 
+ENT.Mass = 6
+ENT.SphereSize = false 
+ENT.SphereSize = false 
+
 ENT.dmg = 200
 ENT.dmgradiusminM = 3 * 2
 ENT.dmgradiusmaxM = 7 * 1.5

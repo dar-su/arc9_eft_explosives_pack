@@ -1,9 +1,6 @@
--- SWEP.CustomSelectIcon = Material("vgui/hud/arc9_go_nade_frag")
-
 SWEP.Base = "arc9_eft_grenade_base"
 SWEP.Category = "ARC9 - Escape From Tarkov"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
-SWEP.SubCategory = "_Not for your eyes"
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
@@ -22,17 +19,17 @@ SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/vog17_skoba.mdl"
 SWEP.ReloadHideBoneTables = {
     [1] = {
         "weapon",
-        "weapon_skoba",
-        "weapon_ring",
-        "weapon_pin",
-        "weapon_pin_r",
-        "weapon_pin_l",
+        "skoba",
+        "ring",
+        "pin",
+        "pin_r",
+        "pin_l",
     },    
     [2] = {
-        "weapon_ring",
-        "weapon_pin",
-        "weapon_pin_r",
-        "weapon_pin_l",
+        "ring",
+        "pin",
+        "pin_r",
+        "pin_l",
     },
 }
 

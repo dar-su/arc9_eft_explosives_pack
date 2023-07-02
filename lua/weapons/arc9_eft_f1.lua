@@ -1,9 +1,6 @@
--- SWEP.CustomSelectIcon = Material("vgui/hud/arc9_go_nade_frag")
-
 SWEP.Base = "arc9_eft_grenade_base"
 SWEP.Category = "ARC9 - Escape From Tarkov"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
-SWEP.SubCategory = "_Not for your eyes"
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 

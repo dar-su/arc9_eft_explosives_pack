@@ -1,7 +1,6 @@
 SWEP.Base = "arc9_base_nade"
 SWEP.Category = "ARC9 - Escape From Tarkov"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
-SWEP.SubCategory = "_Not for your eyes"
 SWEP.Spawnable = false 
 SWEP.AdminOnly = false
 SWEP.NoDynamicKillIcon = true

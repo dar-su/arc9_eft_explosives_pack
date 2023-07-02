@@ -1,9 +1,6 @@
--- SWEP.CustomSelectIcon = Material("vgui/hud/arc9_go_nade_frag")
-
 SWEP.Base = "arc9_eft_grenade_base"
 SWEP.Category = "ARC9 - Escape From Tarkov"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
-SWEP.SubCategory = "_Not for your eyes"
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
@@ -91,7 +88,7 @@ SWEP.Animations = {
 		-- Mult = 1.2,
         EventTable = {
             { s = path .. "rgd_throw.ogg", t = 0 },
-            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.05 },
+            -- { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.05 },
             -- { s = path .. "rgd_lever.ogg", t = 15/24 },
             {hide = 1, t = 0},
         },
@@ -103,7 +100,7 @@ SWEP.Animations = {
         Source = "fire2",
         EventTable = {
             { s = path .. "rgd_throw.ogg", t = 0 },
-            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.05 },
+            -- { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.05 },
             -- { s = path .. "rgd_lever.ogg", t = 15/24 },
             {hide = 1, t = 0},
         },
