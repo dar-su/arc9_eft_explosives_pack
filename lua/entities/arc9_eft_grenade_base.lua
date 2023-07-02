@@ -197,7 +197,7 @@ function ENT:Detonate()
                     net.Send(ply)
 
                     ply:ViewPunch(Angle(1.5, 0, -7.5) * contmult)
-                elseif self.isflashbang then
+                elseif ply:IsNPC() and self.isflashbang then
                     ply:SetNPCState(NPC_STATE_PLAYDEAD)
     
                     timer.Simple(contmult * self.contusionLength * 0.5, function()
