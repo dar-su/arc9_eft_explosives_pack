@@ -9,7 +9,7 @@ SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenade") or "Hand grenade"
 SWEP.Description = [[RGD-5 (GAU index - 57-G-717) is an antipersonnel fragmentation time-delayed offensive hand grenade. The grenade's UZRGM fuze insures a time delay of 3.2 - 4.2 seconds. Due to the offensive type of the grenade, its fragments are relatively light and have a smaller dispersion radius.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_rgd5.mdl"
-SWEP.WorldModel = "models/weapons/w_eq_fraggrenade.mdl"
+SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_rgd5_unthrowed.mdl"
 
 SWEP.ShootEnt = "arc9_eft_grenade_rgd5"
 SWEP.Ammo = "grenade"

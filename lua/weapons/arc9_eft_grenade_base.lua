@@ -36,13 +36,27 @@ SWEP.NoTPIKVMPos = true
 SWEP.TPIKforcelefthand = true
 SWEP.TPIKParentToSpine4 = true  
 SWEP.WorldModelOffset = {
-    Pos = Vector(-6, 3, -11),
+    Pos = Vector(-6.5, 3, -11),
     Ang = Angle(20, -10, 195),
 
     TPIKPos = Vector(10, -1, 0),
     TPIKAng = Angle(0, 90, 90),
     Scale = 1,
 }
+
+function SWEP:DrawWorldModel() -- custom func to never draw custommodel when on ground and use regular wm
+    local owner = self:GetOwner()
+
+    if IsValid(owner) and owner:GetActiveWeapon() == self then
+        self:DrawCustomModel(true)
+        self:DoBodygroups(true)
+        self:DrawLasers(true)
+        self:DoTPIK()
+        self:DrawFlashlightsWM()
+    else
+        self:DrawModel()
+    end
+end
 
 SWEP.BottomlessClip = true
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.

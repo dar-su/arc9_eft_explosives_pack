@@ -9,7 +9,7 @@ SWEP.Class = ARC9:GetPhrase("eft_class_weapon_smoke") or "Smoke grenade"
 SWEP.Description = [[The M18 smoke grenade made in the USA. Used in the US Army since the Second World War. The smoke is green-colored.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_m18.mdl"
-SWEP.WorldModel = "models/weapons/w_eq_fraggrenade.mdl"
+SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_m18_unthrowed.mdl"
 
 SWEP.ShootEnt = "arc9_eft_grenade_m18"
 SWEP.Ammo = "grenade"

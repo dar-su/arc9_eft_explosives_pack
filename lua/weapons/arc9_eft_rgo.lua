@@ -10,7 +10,7 @@ SWEP.Description = [[RGO (Ruchnaya Granata Oboronitel'naya - "Defensive Hand Gre
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_rgn_rgo.mdl"
 SWEP.DefaultBodygroups = "10000000000000"
-SWEP.WorldModel = "models/weapons/w_eq_fraggrenade.mdl"
+SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_rgo_unthrowed.mdl"
 
 SWEP.ShootEnt = "arc9_eft_grenade_rgo"
 SWEP.Ammo = "grenade"

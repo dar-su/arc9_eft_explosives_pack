@@ -9,7 +9,7 @@ SWEP.Class = ARC9:GetPhrase("eft_class_weapon_improvised_grenade") or "Improvise
 SWEP.Description = [[The "Khattabka" hand-made hand grenade based on the VOG-17 grenade launcher shell. The grenade is a VOG-17 shell with a removed head part containing a detonator and self-destructor. A short fuse has been installed to speed up the ignition. An extremely deadly grenade.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_vog17.mdl"
-SWEP.WorldModel = "models/weapons/w_eq_fraggrenade.mdl"
+SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_vog17_unthrowed.mdl"
 
 SWEP.ShootEnt = "arc9_eft_grenade_vog17"
 SWEP.Ammo = "grenade"

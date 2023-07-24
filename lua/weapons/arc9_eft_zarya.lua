@@ -9,7 +9,7 @@ SWEP.Class = ARC9:GetPhrase("eft_class_weapon_stun") or "Stun grenade"
 SWEP.Description = [[Intended to suppress the mental stability by creating a sudden sound effect and a bright flash. Used in special operations for apprehension of criminals and in riot suppression.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_zarya.mdl"
-SWEP.WorldModel = "models/weapons/w_eq_fraggrenade.mdl"
+SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_zarya_unthrowed.mdl"
 
 SWEP.ShootEnt = "arc9_eft_grenade_zarya"
 SWEP.Ammo = "grenade"

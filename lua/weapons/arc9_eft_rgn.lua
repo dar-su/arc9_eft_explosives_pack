@@ -9,7 +9,7 @@ SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenade") or "Hand grenade"
 SWEP.Description = [[RGN (Ruchnaya Granata Nastupatel'naya - "Offensive Hand Grenade") is an offensive anti-personnel fragmentation hand grenade of impact action.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_rgn_rgo.mdl"
-SWEP.WorldModel = "models/weapons/w_eq_fraggrenade.mdl"
+SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_rgn_unthrowed.mdl"
 
 SWEP.ShootEnt = "arc9_eft_grenade_rgn"
 SWEP.Ammo = "grenade"

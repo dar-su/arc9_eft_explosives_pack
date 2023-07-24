@@ -9,8 +9,15 @@ SWEP.Class = ARC9:GetPhrase("eft_class_weapon_smoke") or "Smoke grenade"
 SWEP.Description = [[A Soviet-made smoke hand grenade, designed to create smoke zones with covering or target designation purposes. Cheap and pretty common in post-soviet countries.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_rdg2.mdl"
-SWEP.WorldModel = "models/weapons/w_eq_fraggrenade.mdl"
+SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_rdg2_unthrowed.mdl"
+SWEP.WorldModelOffset = {
+    Pos = Vector(-8, 3, -11),
+    Ang = Angle(20, -10, 195),
 
+    TPIKPos = Vector(10, -1, 0),
+    TPIKAng = Angle(0, 90, 90),
+    Scale = 1,
+}
 SWEP.ShootEnt = "arc9_eft_grenade_rdg2b"
 SWEP.Ammo = "grenade"
 
