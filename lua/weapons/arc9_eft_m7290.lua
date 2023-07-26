@@ -19,17 +19,13 @@ SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/m7920_skoba.mdl"
 SWEP.ReloadHideBoneTables = {
     [1] = {
         "weapon",
-        "skoba",
-        "ring",
-        "pin",
-        "pin_r",
-        "pin_l",
+        "weapon_skoba",
+        "weapon_ring",
+        "weapon_pin",
     },    
     [2] = {
-        "ring",
-        "pin",
-        "pin_r",
-        "pin_l",
+        "weapon_ring",
+        "weapon_pin",
     },
 }
 
