@@ -118,4 +118,21 @@ SWEP.Animations = {
         -- EjectAt = 0.05,
         MinProgress = 0.8
     },
+
+    ["quicknade"] = {
+        Source = "fire_quick",
+		Mult = 1.0,
+        EventTable = {
+            { s = path .. "grenade_smoke_russian_disarm1.ogg", t = 0 },
+            { s = path .. "grenade_smoke_russian_firsttorn.ogg", t = 11/24 },
+            { s = path .. "grenade_smoke_russian_secondtorn.ogg", t = 27/24 },
+            { s = path .. "grenade_smoke_russian_ignition.ogg", t = 41/24 },
+            { s = path .. "grenade_smoke_russian_throw.ogg", t = 58/24 },
+            {hide = 2, t = 40/24},
+            {hide = 1, t = 2.4},
+        },
+        EjectAt = 0.4,
+        FireASAP = 0.98,
+        MinProgress = 0.7
+    },
 }

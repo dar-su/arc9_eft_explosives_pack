@@ -136,3 +136,39 @@ SWEP.AnimDraw = false
 SWEP.ReloadHideBonesFirstPerson = true
 
 SWEP.ShootPosOffset = Vector(2, 2, -2)
+
+SWEP.CantSafety = true 
+SWEP.IsQuickGrenade = true
+
+
+function SWEP:QuicknadeDeploy()
+    local owner = self:GetOwner()
+    self.ViewModelPos = Vector(0, 0, 0)
+    self.ViewModelAng = Angle(0, 0, 0)
+
+    owner.ARC9LastSelectedGrenade = self:GetClass()
+
+    local WasDrawnByBind = owner:KeyDown(IN_GRENADE1) or owner.ARC9QuickthrowPls
+    owner.ARC9QuickthrowPls = nil 
+    
+    local anim = "draw"
+    if WasDrawnByBind and self:HasAnimation("quicknade") then anim = "quicknade" end
+
+    if WasDrawnByBind then
+        self.WasThrownByBind = true
+        local t = self:PlayAnimation(anim, 1, true)
+        local mp = self:GetAnimationEntry(anim).MinProgress or 1
+        self:SetReady(true)
+
+        self:SetGrenadePrimed(true)
+        -- self:SetGrenadePrimedTime(CurTime())
+        -- self:SetGrenadeTossing(owner:KeyDown(IN_ATTACK2))
+
+        -- self:ThrowGrenade(ARC9.NADETHROWTYPE_NORMAL, t)
+        self:ThrowGrenade(ARC9.NADETHROWTYPE_NORMAL, mp)
+        self:SetGrenadeRecovering(true)
+    else
+        self:PlayAnimation(anim, self:GetProcessedValue("DeployTime", true, 1), true)
+        self:SetReady(true)
+    end
+end

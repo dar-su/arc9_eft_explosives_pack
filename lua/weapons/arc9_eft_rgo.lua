@@ -108,4 +108,19 @@ SWEP.Animations = {
         EjectAt = 0.05,
         MinProgress = 0.32
     },
+    ["quicknade"] = {
+        Source = "fire_quick",
+		Mult = 1.0,
+        EventTable = {
+            { s = path .. "rgd_draw.ogg", t = 0 },
+            { s = path .. "rgd_pin.ogg", t = 0.2 },
+            { s = path .. "rgd_throw.ogg", t = 0.5 },
+            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.55 },
+            -- { s = path .. "rgd_lever.ogg", t = 15/24 },
+            {hide = 1, t = 0},
+        },
+        EjectAt = 0.4,
+        FireASAP = 0.98,
+        MinProgress = 0.7
+    },
 }
