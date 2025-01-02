@@ -5,6 +5,7 @@ SWEP.Spawnable = false
 SWEP.AdminOnly = false
 SWEP.NoDynamicKillIcon = true
 SWEP.NotForNPCs = true
+SWEP.EntitySelectIcon = true
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_rgd5") or "RGD-5"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenade") or "Hand grenade"
@@ -24,6 +25,8 @@ SWEP.Firemodes = {
         PrintName = "Throw"
     },
 }
+
+SWEP.ForceDefaultAmmo = 0
 
 SWEP.UseHands = true
 
@@ -116,7 +119,7 @@ SWEP.CrouchPos = Vector(-0.7, -3.8, .35)
 SWEP.CrouchAng = Angle(0, 0, -1)
 
 SWEP.CustomizeAng = Angle(87, -25, -94.3)
-SWEP.CustomizePos = Vector(-7.3, 21, 11)
+SWEP.CustomizePos = Vector(-7.3, 21, 14)
 SWEP.CustomizeSnapshotFOV = 65
 SWEP.CustomizeRotateAnchor = Vector(19, -4.28, -5.23)
 
@@ -138,7 +141,7 @@ SWEP.ReloadHideBonesFirstPerson = true
 SWEP.ShootPosOffset = Vector(2, 2, -2)
 
 SWEP.CantSafety = true 
-SWEP.IsQuickGrenade = true
+-- SWEP.IsQuickGrenade = true
 
 
 function SWEP:QuicknadeDeploy()

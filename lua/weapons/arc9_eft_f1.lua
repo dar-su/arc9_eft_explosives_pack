@@ -8,7 +8,7 @@ SWEP.PrintName = "F-1"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenade") or "Hand grenade"
 SWEP.Description = [[The F-1 hand grenade (GRAU Index 57-G-721) is an anti-personnel fragmentation defensive grenade, designed for neutralizing enemy personnel in defensive combat. Due to a significantly effective fragmentation radius, it should only be thrown from behind hard cover, such as a concrete wall, APC, or tank.]]
 
-SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_f1.mdl"
+SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_f1_2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_f1_unthrowed.mdl"
 
 SWEP.ShootEnt = "arc9_eft_grenade_f1"
@@ -18,18 +18,18 @@ SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/f1_skoba.mdl"
 
 SWEP.ReloadHideBoneTables = {
     [1] = {
-        "weapon",
-        "weapon_skoba",
-        "weapon_ring",
-        "weapon_pin",
-        "weapon_pin_r",
-        "weapon_pin_l",
+        "weapon_f1",
+        "weapon_skoba_f1",
+        "weapon_ring_f1",
+        "weapon_pin_f1",
+        "weapon_pin_r_f1",
+        "weapon_pin_l_f1",
     },    
     [2] = {
-        "weapon_ring",
-        "weapon_pin",
-        "weapon_pin_r",
-        "weapon_pin_l",
+        "weapon_ring_f1",
+        "weapon_pin_f1",
+        "weapon_pin_r_f1",
+        "weapon_pin_l_f1",
     },
 }
 
@@ -38,8 +38,6 @@ local path = "weapons/darsu_eft/grenades/"
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        RareSource = "tooidle",
-        RareSourceChance = 0.0005
     },
     ["idle_primed"] = {
         Source = "fire_idle",
@@ -71,7 +69,7 @@ SWEP.Animations = {
         },
     },
     ["inspect"] = {
-        Source = "look",
+        Source = {"look", "look2"},
     },
     ["pullpin"] = {
         Source = "fire_start",
@@ -88,39 +86,39 @@ SWEP.Animations = {
 		-- Mult = 1.2,
         EventTable = {
             { s = path .. "rgd_throw.ogg", t = 0 },
-            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.05 },
+            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.15 },
             -- { s = path .. "rgd_lever.ogg", t = 15/24 },
             {hide = 1, t = 0},
         },
-        EjectAt = 0.05,
-        MinProgress = 0.22
+        EjectAt = 0.15,
+        MinProgress = 0.47
         -- MinProgress = 0.4
     },
     ["toss"] = {
         Source = "fire2",
         EventTable = {
             { s = path .. "rgd_throw.ogg", t = 0 },
-            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.05 },
+            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.15 },
             -- { s = path .. "rgd_lever.ogg", t = 15/24 },
             {hide = 1, t = 0},
         },
-        EjectAt = 0.05,
-        MinProgress = 0.32
+        EjectAt = 0.15,
+        MinProgress = 0.37
     },
 
-    ["quicknade"] = {
-        Source = "fire_quick",
-		Mult = 1.0,
-        EventTable = {
-            { s = path .. "rgd_draw.ogg", t = 0 },
-            { s = path .. "rgd_pin.ogg", t = 0.2 },
-            { s = path .. "rgd_throw.ogg", t = 0.5 },
-            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.55 },
-            -- { s = path .. "rgd_lever.ogg", t = 15/24 },
-            {hide = 1, t = 0},
-        },
-        EjectAt = 0.4,
-        FireASAP = 0.98,
-        MinProgress = 0.7
-    },
+    -- ["quicknade"] = {
+    --     Source = "fire_quick",
+	-- 	Mult = 1.0,
+    --     EventTable = {
+    --         { s = path .. "rgd_draw.ogg", t = 0 },
+    --         { s = path .. "rgd_pin.ogg", t = 0.2 },
+    --         { s = path .. "rgd_throw.ogg", t = 0.5 },
+    --         { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.55 },
+    --         -- { s = path .. "rgd_lever.ogg", t = 15/24 },
+    --         {hide = 1, t = 0},
+    --     },
+    --     EjectAt = 0.4,
+    --     FireASAP = 0.98,
+    --     MinProgress = 0.7
+    -- },
 }

@@ -8,7 +8,7 @@ SWEP.PrintName = ARC9:GetPhrase("eft_weapon_zarya") or "Zarya"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_stun") or "Stun grenade"
 SWEP.Description = [[Intended to suppress the mental stability by creating a sudden sound effect and a bright flash. Used in special operations for apprehension of criminals and in riot suppression.]]
 
-SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_zarya.mdl"
+SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_zarya_2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_zarya_unthrowed.mdl"
 
 SWEP.ShootEnt = "arc9_eft_grenade_zarya"
@@ -18,18 +18,18 @@ SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/zarya_skoba.mdl"
 
 SWEP.ReloadHideBoneTables = {
     [1] = {
-        "weapon",
-        "skoba",
-        "ring",
-        "pin",
-        "pin_r",
-        "pin_l",
+        "weapon_zarya",
+        "weapon_skoba_zarya",
+        "weapon_ring_zarya",
+        "weapon_pin_zarya",
+        "weapon_pin_r_zarya",
+        "weapon_pin_l_zarya",
     },    
     [2] = {
-        "ring",
-        "pin",
-        "pin_r",
-        "pin_l",
+        "weapon_ring_zarya",
+        "weapon_pin_zarya",
+        "weapon_pin_r_zarya",
+        "weapon_pin_l_zarya",
     },
 }
 
@@ -38,8 +38,6 @@ local path = "weapons/darsu_eft/grenades/"
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        RareSource = "tooidle",
-        RareSourceChance = 0.0005
     },
     ["idle_primed"] = {
         Source = "fire_idle",
@@ -88,38 +86,38 @@ SWEP.Animations = {
 		-- Mult = 1.2,
         EventTable = {
             { s = path .. "rgd_throw.ogg", t = 0 },
-            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.05 },
+            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.15 },
             -- { s = path .. "rgd_lever.ogg", t = 15/24 },
             {hide = 1, t = 0},
         },
-        EjectAt = 0.05,
-        MinProgress = 0.22
+        EjectAt = 0.15,
+        MinProgress = 0.47
         -- MinProgress = 0.4
     },
     ["toss"] = {
         Source = "fire2",
         EventTable = {
             { s = path .. "rgd_throw.ogg", t = 0 },
-            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.05 },
+            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.15 },
             -- { s = path .. "rgd_lever.ogg", t = 15/24 },
             {hide = 1, t = 0},
         },
-        EjectAt = 0.05,
-        MinProgress = 0.32
+        EjectAt = 0.15,
+        MinProgress = 0.37
     },
-    ["quicknade"] = {
-        Source = "fire_quick",
-		Mult = 1.0,
-        EventTable = {
-            { s = path .. "rgd_draw.ogg", t = 0 },
-            { s = path .. "rgd_pin.ogg", t = 0.2 },
-            { s = path .. "rgd_throw.ogg", t = 0.5 },
-            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.55 },
-            -- { s = path .. "rgd_lever.ogg", t = 15/24 },
-            {hide = 1, t = 0},
-        },
-        EjectAt = 0.4,
-        FireASAP = 0.98,
-        MinProgress = 0.7
-    },
+    -- ["quicknade"] = {
+    --     Source = "fire_quick",
+	-- 	Mult = 1.0,
+    --     EventTable = {
+    --         { s = path .. "rgd_draw.ogg", t = 0 },
+    --         { s = path .. "rgd_pin.ogg", t = 0.2 },
+    --         { s = path .. "rgd_throw.ogg", t = 0.5 },
+    --         { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.55 },
+    --         -- { s = path .. "rgd_lever.ogg", t = 15/24 },
+    --         {hide = 1, t = 0},
+    --     },
+    --     EjectAt = 0.4,
+    --     FireASAP = 0.98,
+    --     MinProgress = 0.7
+    -- },
 }

@@ -20,6 +20,7 @@ ENT.shrapnelcount = 75
 ENT.shrapneldmg = 55
 
 ENT.ExplodeOnImpact = true
+ENT.ExplodeOnImpactDelay = 0.3
 
 local path = "weapons/darsu_eft/grenades/"
 ENT.BounceSounds = { path .. "grenade_collision_concrete1.ogg", path .. "grenade_collision_concrete2.ogg", path .. "grenade_collision_concrete3.ogg" }

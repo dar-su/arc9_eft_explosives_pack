@@ -8,7 +8,7 @@ SWEP.PrintName = "M7290"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_flashbang") or "Flash Bang grenade"
 SWEP.Description = [[Model 7290 is a standard distracting explosive device. Produces 175 dB and a powerful light flash.]]
 
-SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_m7920.mdl"
+SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_m7920_2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_m7920_unthrowed.mdl"
 
 SWEP.ShootEnt = "arc9_eft_grenade_m7290"
@@ -18,14 +18,14 @@ SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/m7920_skoba.mdl"
 
 SWEP.ReloadHideBoneTables = {
     [1] = {
-        "weapon",
-        "weapon_skoba",
-        "weapon_ring",
-        "weapon_pin",
+        "weapon_grenade_m7920_fake",
+        "weapon_grenade_skoba_m7920",
+        "weapon_grenade_m7920_ring",
+        "weapon_grenade_pin_m7920",
     },    
     [2] = {
-        "weapon_ring",
-        "weapon_pin",
+        "weapon_grenade_m7920_ring",
+        "weapon_grenade_pin_m7920",
     },
 }
 
@@ -34,8 +34,6 @@ local path = "weapons/darsu_eft/grenades/"
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        RareSource = "tooidle",
-        RareSourceChance = 0.0005
     },
     ["idle_primed"] = {
         Source = "fire_idle",
@@ -67,7 +65,7 @@ SWEP.Animations = {
         },
     },
     ["inspect"] = {
-        Source = {"look", "check"},
+        Source = {"look", "look1"},
     },
     ["pullpin"] = {
         Source = "fire_start",
@@ -84,12 +82,12 @@ SWEP.Animations = {
 		-- Mult = 1.2,
         EventTable = {
             { s = path .. "rgd_throw.ogg", t = 0 },
-            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.05 },
+            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.15 },
             -- { s = path .. "rgd_lever.ogg", t = 15/24 },
             {hide = 1, t = 0},
         },
-        EjectAt = 0.05,
-        MinProgress = 0.22
+        EjectAt = 0.15,
+        MinProgress = 0.47
         -- MinProgress = 0.4
     },
     ["toss"] = {
@@ -97,29 +95,29 @@ SWEP.Animations = {
         EventTable = {
             { s = path .. "rgd_pin.ogg", t = 12/24 },
             { s = path .. "rgd_throw.ogg", t = 0 },
-            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.05 },
+            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.15 },
             -- { s = path .. "rgd_lever.ogg", t = 15/24 },
             {hide = 1, t = 0},
         },
-        EjectAt = 0.05,
-        MinProgress = 0.32
+        EjectAt = 0.15,
+        MinProgress = 0.37
     },
 
 
 
-    ["quicknade"] = {
-        Source = "fire_quick",
-		Mult = 1.0,
-        EventTable = {
-            { s = path .. "rgd_draw.ogg", t = 0 },
-            { s = path .. "rgd_pin.ogg", t = 0.2 },
-            { s = path .. "rgd_throw.ogg", t = 0.5 },
-            { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.55 },
-            -- { s = path .. "rgd_lever.ogg", t = 15/24 },
-            {hide = 1, t = 0},
-        },
-        EjectAt = 0.4,
-        FireASAP = 0.98,
-        MinProgress = 0.7
-    },
+    -- ["quicknade"] = {
+    --     Source = "fire_quick",
+	-- 	Mult = 1.0,
+    --     EventTable = {
+    --         { s = path .. "rgd_draw.ogg", t = 0 },
+    --         { s = path .. "rgd_pin.ogg", t = 0.2 },
+    --         { s = path .. "rgd_throw.ogg", t = 0.5 },
+    --         { s = { path .. "gren_fuze1.ogg", path .. "gren_fuze2.ogg", path .. "gren_fuze3.ogg" }, t = 0.55 },
+    --         -- { s = path .. "rgd_lever.ogg", t = 15/24 },
+    --         {hide = 1, t = 0},
+    --     },
+    --     EjectAt = 0.4,
+    --     FireASAP = 0.98,
+    --     MinProgress = 0.7
+    -- },
 }

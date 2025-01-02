@@ -6,8 +6,8 @@ ENT.Spawnable 			= false
 if CLIENT then killicon.Add("arc9_eft_grenade_rgo", "vgui/killicons/arc9_eft_rgo", Color(255, 255, 255)) end
 
 
-ENT.PrintName  = "RGN hand grenade"
-ENT.Model = "models/weapons/arc9/darsu_eft/w_rgn.mdl"
+ENT.PrintName  = "RGO hand grenade"
+ENT.Model = "models/weapons/arc9/darsu_eft/w_rgo.mdl"
 -- ENT.LifeTime = 0.3
 ENT.LifeTime = 3.5
 
@@ -21,6 +21,7 @@ ENT.shrapnelcount = 85
 ENT.shrapneldmg = 40
 
 ENT.ExplodeOnImpact = true
+ENT.ExplodeOnImpactDelay = 0.3
 
 local path = "weapons/darsu_eft/grenades/"
 ENT.BounceSounds = { path .. "grenade_collision_concrete1.ogg", path .. "grenade_collision_concrete2.ogg", path .. "grenade_collision_concrete3.ogg" }
