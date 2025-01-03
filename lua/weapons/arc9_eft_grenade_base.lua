@@ -123,6 +123,9 @@ SWEP.CustomizePos = Vector(-7.3, 21, 14)
 SWEP.CustomizeSnapshotFOV = 65
 SWEP.CustomizeRotateAnchor = Vector(19, -4.28, -5.23)
 
+SWEP.HolsterPos = Vector(0, 0, 0)
+SWEP.HolsterAng = Angle(0, 0, 0)
+
 -------------------------- HoldTypes
 
 SWEP.HoldType = "slam"
