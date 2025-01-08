@@ -144,7 +144,7 @@ SWEP.ReloadHideBonesFirstPerson = true
 SWEP.ShootPosOffset = Vector(2, 2, -2)
 
 SWEP.CantSafety = true 
--- SWEP.IsQuickGrenade = true
+SWEP.IsQuickGrenade = true
 
 
 function SWEP:QuicknadeDeploy()
