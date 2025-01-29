@@ -7,6 +7,8 @@ if CLIENT then killicon.Add("arc9_eft_grenade_m67", "vgui/killicons/arc9_eft_m67
 
 ENT.PrintName  = "M67 hand grenade"
 ENT.Model = "models/weapons/arc9/darsu_eft/w_m67.mdl"
+ENT.ModelTrue = "models/weapons/arc9/darsu_eft/w_m67.mdl"
+ENT.SWEP = "arc9_eft_m67"
 ENT.LifeTime = 5
 
 ENT.dmg = 300

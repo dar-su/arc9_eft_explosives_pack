@@ -7,6 +7,7 @@ if CLIENT then killicon.Add("arc9_eft_grenade_725", "vgui/killicons/arc9_eft_rsh
 
 ENT.PrintName  = "RSHG-2 rocket"
 ENT.Model = "models/weapons/arc9/darsu_eft/rshg2_rocket.mdl"
+ENT.ModelTrue = "models/weapons/arc9/darsu_eft/rshg2_rocket.mdl"
 -- ENT.LifeTime = 0.3
 ENT.LifeTime = 3.5
 

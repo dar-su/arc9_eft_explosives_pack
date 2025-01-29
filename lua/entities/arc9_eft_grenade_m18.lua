@@ -7,6 +7,8 @@ if CLIENT then killicon.Add("arc9_eft_grenade_m18", "vgui/killicons/arc9_eft_m18
 
 ENT.PrintName  = "M18 smoke grenade"
 ENT.Model = "models/weapons/arc9/darsu_eft/w_m18.mdl"
+ENT.ModelTrue = "models/weapons/arc9/darsu_eft/w_m18.mdl"
+ENT.SWEP = "arc9_eft_m18"
 ENT.StartTime = 1
 ENT.LifeTime = 266
 ENT.EmitTime = 90
@@ -47,6 +49,11 @@ function ENT:Think()
     end
 
     if self.Defused then return end
+
+    if CLIENT and !self.LightPlayed then
+        self.LightPlayed = true
+        ParticleEffectAttach("port_smoke_heavy", PATTACH_ABSORIGIN_FOLLOW, self, 1) -- flash
+    end
 
     if self.StartTime > 0 and self.SpawnTime + self.StartTime < CurTime() then
         self:StartSmoke()
@@ -103,6 +110,6 @@ if CLIENT then
     function ENT:Initialize()
         self.SpawnTime = CurTime()
 
-        ParticleEffectAttach("port_smoke_heavy", PATTACH_ABSORIGIN_FOLLOW, self, 1) -- flash
+        -- ParticleEffectAttach("port_smoke_heavy", PATTACH_ABSORIGIN_FOLLOW, self, 1) -- flash
     end
 end

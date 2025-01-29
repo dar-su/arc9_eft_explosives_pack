@@ -136,3 +136,5 @@ SWEP.Animations = {
         MinProgress = 0.7
     },
 }
+
+SWEP.EFT_Tripwireable = false

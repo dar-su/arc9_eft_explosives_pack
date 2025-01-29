@@ -7,6 +7,8 @@ if CLIENT then killicon.Add("arc9_eft_grenade_m7290", "vgui/killicons/arc9_eft_m
 
 ENT.PrintName  = "M7290 Flash Bang"
 ENT.Model = "models/weapons/arc9/darsu_eft/w_m7920.mdl"
+ENT.ModelTrue = "models/weapons/arc9/darsu_eft/w_m7920.mdl"
+ENT.SWEP = "arc9_eft_m7290"
 ENT.LifeTime = 1.5
 
 ENT.dmg = 0

@@ -7,6 +7,8 @@ if CLIENT then killicon.Add("arc9_eft_grenade_vog25", "vgui/killicons/arc9_eft_v
 
 ENT.PrintName  = "VOG-25 Khattabka"
 ENT.Model = "models/weapons/arc9/darsu_eft/w_vog25.mdl"
+ENT.ModelTrue = "models/weapons/arc9/darsu_eft/w_vog25.mdl"
+ENT.SWEP = "arc9_eft_vog25"
 ENT.LifeTime = 2
 
 ENT.dmg = 150

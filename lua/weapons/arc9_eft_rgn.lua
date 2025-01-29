@@ -120,4 +120,56 @@ SWEP.Animations = {
     --     FireASAP = 0.98,
     --     MinProgress = 0.7
     -- },
+
+    ["idle_mine"] = {
+        Source = "mine_idle",
+    },
+    ["draw_mine"] = {
+        Source = "mine_draw",
+        EventTable = {
+            { s = path .. "rgd_draw.ogg", t = 0 },
+            { s = path .. "rgd_safety.ogg", t = 24/24 },
+            { hide = 0, t = 0 },
+        },
+    },
+    ["holster_mine"] = {
+        Source = "mine_holster",
+        EventTable = {
+            { s = path .. "rgd_holster.ogg", t = 0 },
+        },
+    },
+    ["inspect_mine"] = {
+        Source = "mine_look",
+    },
+    ["fire_mine"] = {
+        Source = "mine_fire",
+        EventTable = {
+            { s = path .. "tripwire_grenade_planting.ogg", t = 0.1 },
+        },
+    },
+    ["firemode_1"] = {
+        Source = "idle_to_mine",
+        EventTable = {
+            { s = path .. "rgd_draw.ogg", t = 0.2 },
+            { s = path .. "tripwire_grenade_planting.ogg", t = 1.4 },
+            { s = path .. "tripwire_grenade_planting_wire.ogg", t = 1.9 },
+        },
+    },
+    ["firemode_2"] = {
+        Source = "mine_to_idle",
+        EventTable = {
+            { s = path .. "tripwire_grenade_unplanting_wire.ogg", t = 0.4 },
+            { s = path .. "tripwire_grenade_unplanting.ogg", t = 2.1 },
+        },
+    },
+}
+
+SWEP.Attachments = {
+    {
+        PrintName = "Equipment",
+        Category = "eft_tripwire",
+        Bone = "weapon_grenade_rgn",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+    },
 }

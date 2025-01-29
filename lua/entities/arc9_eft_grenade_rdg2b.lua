@@ -7,6 +7,8 @@ if CLIENT then killicon.Add("arc9_eft_grenade_rdg2b", "vgui/killicons/arc9_eft_r
 
 ENT.PrintName  = "RDG-2B smoke grenade"
 ENT.Model = "models/weapons/arc9/darsu_eft/w_rdg2.mdl"
+ENT.ModelTrue = "models/weapons/arc9/darsu_eft/w_rdg2.mdl"
+ENT.SWEP = "arc9_eft_rdg2b"
 ENT.StartTime = 3.5
 ENT.LifeTime = 266
 ENT.EmitTime = 120

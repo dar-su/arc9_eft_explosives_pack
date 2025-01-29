@@ -7,6 +7,8 @@ if CLIENT then killicon.Add("arc9_eft_grenade_zarya", "vgui/killicons/arc9_eft_z
 
 ENT.PrintName  = "Zarya stun grenade"
 ENT.Model = "models/weapons/arc9/darsu_eft/w_zarya.mdl"
+ENT.ModelTrue = "models/weapons/arc9/darsu_eft/w_zarya.mdl"
+ENT.SWEP = "arc9_eft_zarya"
 ENT.LifeTime = 2
 
 ENT.dmg = 0
