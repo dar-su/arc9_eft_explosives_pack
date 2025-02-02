@@ -448,7 +448,7 @@ local gp25zeroing = {4.5, 7.25, 9.4, 11.3, 14.1, 15.6} -- negro
 local zeroang = Angle(4.5, 0, 0)
 SWEP.ShootAngOffsetHook = function(swep, val) 
     if swep:GetInSights() then
-        print(gp25zeroing[swep:GetMultiSight()], swep:GetMultiSight())
+        -- print(gp25zeroing[swep:GetMultiSight()], swep:GetMultiSight())
         return Angle(gp25zeroing[swep:GetMultiSight()], 0, 0)
     end
 

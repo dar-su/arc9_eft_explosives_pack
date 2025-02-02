@@ -119,7 +119,7 @@ function ENT:Defuse()
 			drop:SetPos(self.Grenade:GetPos())
 			drop:SetAngles(self.Grenade:GetAngles())
 			drop:Spawn()
-			drop.EFTPickupIn = CurTime() + 1.5
+			drop.EFTPickupIn = CurTime() + 1
 		end
 
 		if IsValid(self.Defusor) then
