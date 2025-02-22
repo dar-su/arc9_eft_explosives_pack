@@ -214,7 +214,7 @@ SWEP.Animations = {
     ["idle"] = { 
         Source = "idle", 
 
-        Time = 100,       -- REMOVE TIME !!!!!!!!
+        -- Time = 100,       -- REMOVE TIME !!!!!!!!
     },
 
     ["idle_sights"] = { Source = "idle_sights" },

@@ -13,8 +13,6 @@ SWEP.Description = [[RGD-5 (GAU index - 57-G-717) is an antipersonnel fragmentat
 SWEP.Credits = { 
     [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
     [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD", 
-    [ARC9:GetPhrase("eft_trivia_help") .. "3"] = "Mal0", 
-    [ARC9:GetPhrase("eft_trivia_arc9") .. "4"] = "Arctic",
 }
 
 SWEP.Slot = 4
