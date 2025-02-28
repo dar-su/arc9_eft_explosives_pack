@@ -45,19 +45,7 @@ SWEP.WorldModelOffset = {
     Scale = 1,
 }
 
-function SWEP:DrawWorldModel() -- custom func to never draw custommodel when on ground and use regular wm
-    local owner = self:GetOwner()
-
-    if IsValid(owner) and owner:GetActiveWeapon() == self then
-        self:DrawCustomModel(true)
-        self:DoBodygroups(true)
-        self:DrawLasers(true)
-        self:DoTPIK()
-        self:DrawFlashlightsWM()
-    else
-        self:DrawModel()
-    end
-end
+SWEP.MirrorVMWMHeldOnly = true
 
 SWEP.BottomlessClip = true
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
