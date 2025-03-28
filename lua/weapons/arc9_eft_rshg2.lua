@@ -2,6 +2,7 @@ AddCSLuaFile()
 SWEP.Base = "arc9_eft_base"
 SWEP.Category = "ARC9 - Escape From Tarkov"
 SWEP.Spawnable = true
+SWEP.NotForNPCs = true
 
 ------------------------- |||           Trivia            ||| -------------------------
 
@@ -78,7 +79,7 @@ SWEP.Slot = 4
 
 
 SWEP.ShootEnt = "arc9_eft_grenade_725"
-SWEP.ShootEntForce = 30000
+SWEP.ShootEntForce = 4000
 SWEP.Disposable = true
 SWEP.BottomlessClip = true
 SWEP.ReloadInSights = false
@@ -388,7 +389,7 @@ SWEP.MultiSightTable = {
         ViewModelFOV = 54,
         CrosshairInSights = false,
         OnSwitchToSight = function(self, slottbl)
-            if CLIENT then ARC9EFTdrawnumber(100) end
+            if CLIENT then ARC9EFTdrawnumber(50) end
         end,
     },
     {
@@ -398,7 +399,7 @@ SWEP.MultiSightTable = {
         ViewModelFOV = 54,
         CrosshairInSights = false,
         OnSwitchToSight = function(self, slottbl)
-            if CLIENT then ARC9EFTdrawnumber(150) end
+            if CLIENT then ARC9EFTdrawnumber(100) end
         end,
     },
     {
@@ -408,17 +409,17 @@ SWEP.MultiSightTable = {
         ViewModelFOV = 54,
         CrosshairInSights = false,
         OnSwitchToSight = function(self, slottbl)
-            if CLIENT then ARC9EFTdrawnumber(200) end
+            if CLIENT then ARC9EFTdrawnumber(150) end
         end,
     },
     {
         Pos = Vector(-4.615, -1, -4.03 - 0.4),
-        Ang = Angle(0, 0, 0),
+        Ang = Angle(0, 0.2, 0),
         Magnification = 1.1,
         ViewModelFOV = 54,
         CrosshairInSights = false,
         OnSwitchToSight = function(self, slottbl)
-            if CLIENT then ARC9EFTdrawnumber(250) end
+            if CLIENT then ARC9EFTdrawnumber(200) end
         end,
     },
     {
@@ -428,12 +429,22 @@ SWEP.MultiSightTable = {
         ViewModelFOV = 54,
         CrosshairInSights = false,
         OnSwitchToSight = function(self, slottbl)
-            if CLIENT then ARC9EFTdrawnumber(300) end
+            if CLIENT then ARC9EFTdrawnumber(250) end
         end,
     },
     {
         Pos = Vector(-4.615 + 0.05, -1, -4.03 - 0.55),
-        Ang = Angle(0, 0, 0),
+        Ang = Angle(0, 0.15, 0),
+        Magnification = 1.1,
+        ViewModelFOV = 54,
+        CrosshairInSights = false,
+        OnSwitchToSight = function(self, slottbl)
+            if CLIENT then ARC9EFTdrawnumber(300) end
+        end,
+    },
+    {
+        Pos = Vector(-4.615 + 0.05, -1, -4.03 - 0.87),
+        Ang = Angle(0, 2.05, 0),
         Magnification = 1.1,
         ViewModelFOV = 54,
         CrosshairInSights = false,
@@ -443,9 +454,9 @@ SWEP.MultiSightTable = {
     },
 }
 
-local gp25zeroing = {4.5, 7.25, 9.4, 11.3, 14.1, 15.6} -- negro
+local gp25zeroing = {1.5, 4.5, 7.25, 9.4, 11.3, 14.1, 15.6} -- negro
 
-local zeroang = Angle(4.5, 0, 0)
+local zeroang = Angle(1.5, 0, 0)
 SWEP.ShootAngOffsetHook = function(swep, val) 
     if swep:GetInSights() then
         -- print(gp25zeroing[swep:GetMultiSight()], swep:GetMultiSight())
@@ -454,7 +465,12 @@ SWEP.ShootAngOffsetHook = function(swep, val)
 
     return zeroang
 end
-SWEP.ShootAngOffset = Angle(4.5, 0, 0) -- default 100m
+SWEP.ShootAngOffset = Angle(1.5, 0, 0) -- default 50m
+
+SWEP.DynamicConditions = {
+    ["Recoil"] = true,
+    ["ShootAngOffset"] = true,
+}
 
 SWEP.CustomPoseParamsHandler = function(swep, ent, iswm)
     local vall = swep:GetInSights() and swep:GetMultiSight() - 1 or 0
