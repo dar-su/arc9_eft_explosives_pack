@@ -11,7 +11,7 @@ ENT.ModelTrue = "models/weapons/arc9/darsu_eft/rshg2_rocket.mdl"
 -- ENT.LifeTime = 0.3
 ENT.LifeTime = 3.5
 
-ENT.dmg = 300
+ENT.dmg = 600
 ENT.dmgradiusminM = 4 * 2
 ENT.dmgradiusmaxM = 8 * 1.5
 ENT.shakeradiusM = 16.5
@@ -35,3 +35,21 @@ ENT.particle = "explosion_grenade"
 ENT.waterparticle = "water_explosion"
 ENT.watersound = "weapons/underwater_explode3.wav"
 ENT.underdecal = "FadingScorch"
+
+
+ENT.FuseTime = 0.05
+
+if SERVER then
+    function ENT:PhysicsCollide(data, phys)
+        timer.Simple(0, function()
+            if IsValid(self) then
+                if CurTime() > self.SpawnTime + self.FuseTime then
+                    self:Detonate()
+                else
+                    self:FireBullets({Attacker = self:GetOwner(), Damage = self.dmg, Force = 16, HullSize = 16, Tracer = false, Dir = self:GetAngles():Forward(), Src = self:GetPos(), IgnoreEntity = self, AmmoType = 9})
+                    self:Remove()
+                end
+            end
+        end)
+    end
+end

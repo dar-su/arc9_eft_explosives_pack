@@ -41,7 +41,7 @@ SWEP.WorldModelOffset = {
 }
 
 SWEP.IronSights = {
-    Pos = Vector(-4.615, -1, -4.03),
+    Pos = Vector(-4.615, -3.5, -4.03),
     Ang = Angle(0, -0.4, 0),
     Midpoint = { Pos = Vector(2, 4, 8), Ang = Angle(0, 0, -145) },
     Magnification = 1.1,
@@ -54,8 +54,10 @@ SWEP.IronSights = {
 SWEP.NoTPIKVMPos = true
 SWEP.ActivePos = Vector(-0.7, -3.1, 0.35)
 
-SWEP.SprintAng = Angle(20, -20, -25)
-SWEP.SprintPos = Vector(0.5, -1, -1)
+SWEP.SprintAng = Angle(36, 15, -20)
+SWEP.SprintPos = Vector(2, -2, -5.0)
+SWEP.NearWallAng = Angle(36, 15, -20)
+SWEP.NearWallPos = Vector(2, -2, -5.0)
 
 SWEP.CustomizeAng = Angle(90, 0, 22)
 SWEP.CustomizePos = Vector(10, 26, 0)
@@ -149,7 +151,7 @@ SWEP.Overheat = false
 
 ------------------------- |||           Minor stuff            ||| -------------------------
 
-SWEP.MuzzleParticle = "muzzleflash_m79"
+SWEP.MuzzleParticle = "muzzleflash_M82"
 SWEP.NoShellEject = true
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/9x19.mdl"
 SWEP.ShellSounds = ARC9EFT.Shells556
@@ -368,6 +370,38 @@ SWEP.Hook_PrimaryAttack = function(self)
     self:SetInSights(false)
     self:SetShouldHoldType()
 
+
+    -- backblast
+    local owner = self:GetOwner()
+
+    if IsValid(owner) and owner:IsPlayer() then
+        local tr = util.TraceLine( {
+            start = owner:EyePos(),
+            endpos = owner:EyePos() + owner:EyeAngles():Forward() * -64,
+            filter = owner
+        } )
+
+        -- debugoverlay.Line(owner:EyePos(), tr.HitPos)
+        if tr.Hit then
+            timer.Simple(0, function() 
+                local d = DamageInfo()
+                d:SetDamage( 105 )
+                d:SetAttacker( owner )
+                d:SetDamageType( DMG_SLOWBURN ) 
+
+                owner:TakeDamageInfo( d )
+
+                if IsValid(tr.Entity) and (tr.Entity:IsNPC() or tr.Entity:IsPlayer() or tr.Entity:IsNextBot()) then
+                    tr.Entity:TakeDamageInfo( d )
+                end
+            end)
+
+            ParticleEffect( "m79_smoke_e", tr.HitPos, Angle( 0, 0, 0 ) )
+        end
+    end
+
+
+
     -- second muzzleflash
     local data = EffectData()
     data:SetEntity(self)
@@ -383,7 +417,7 @@ SWEP.BuildMultiSight = function() end
 
 SWEP.MultiSightTable = {
     {
-        Pos = Vector(-4.615, -1, -4.03),
+        Pos = Vector(-4.615, -3.5, -4.03),
         Ang = Angle(0, -0.4, 0),
         Magnification = 1.1,
         ViewModelFOV = 54,
@@ -393,7 +427,7 @@ SWEP.MultiSightTable = {
         end,
     },
     {
-        Pos = Vector(-4.615, -1, -4.03 - 0.15),
+        Pos = Vector(-4.615, -3.5, -4.03 - 0.15),
         Ang = Angle(0, 0, 0),
         Magnification = 1.1,
         ViewModelFOV = 54,
@@ -403,7 +437,7 @@ SWEP.MultiSightTable = {
         end,
     },
     {
-        Pos = Vector(-4.615, -1, -4.03 - 0.25),
+        Pos = Vector(-4.615, -3.5, -4.03 - 0.25),
         Ang = Angle(0, 0, 0),
         Magnification = 1.1,
         ViewModelFOV = 54,
@@ -413,7 +447,7 @@ SWEP.MultiSightTable = {
         end,
     },
     {
-        Pos = Vector(-4.615, -1, -4.03 - 0.4),
+        Pos = Vector(-4.615, -3.5, -4.03 - 0.4),
         Ang = Angle(0, 0.2, 0),
         Magnification = 1.1,
         ViewModelFOV = 54,
@@ -423,7 +457,7 @@ SWEP.MultiSightTable = {
         end,
     },
     {
-        Pos = Vector(-4.615, -1, -4.03 - 0.45),
+        Pos = Vector(-4.615, -3.5, -4.03 - 0.45),
         Ang = Angle(0, 0, 0),
         Magnification = 1.1,
         ViewModelFOV = 54,
@@ -433,7 +467,7 @@ SWEP.MultiSightTable = {
         end,
     },
     {
-        Pos = Vector(-4.615 + 0.05, -1, -4.03 - 0.55),
+        Pos = Vector(-4.615 + 0.05, -3.5, -4.03 - 0.55),
         Ang = Angle(0, 0.15, 0),
         Magnification = 1.1,
         ViewModelFOV = 54,
@@ -443,7 +477,7 @@ SWEP.MultiSightTable = {
         end,
     },
     {
-        Pos = Vector(-4.615 + 0.05, -1, -4.03 - 0.87),
+        Pos = Vector(-4.615 + 0.05, -3.5, -4.03 - 0.87),
         Ang = Angle(0, 2.05, 0),
         Magnification = 1.1,
         ViewModelFOV = 54,
