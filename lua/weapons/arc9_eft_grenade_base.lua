@@ -8,11 +8,11 @@ SWEP.NotForNPCs = true
 SWEP.EntitySelectIcon = true
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_rgd5") or "RGD-5"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenade") or "Hand grenade"
-SWEP.Description = [[RGD-5 (GAU index - 57-G-717) is an antipersonnel fragmentation time-delayed offensive hand grenade. The grenade's UZRGM fuze insures a time delay of 3.2 - 4.2 seconds. Due to the offensive type of the grenade, its fragments are relatively light and have a smaller dispersion radius.]]
+SWEP.Class = "eft_class_weapon_grenade" or "Hand grenade"
+SWEP.Description = "eft_weapon_rgd5_desc"
 SWEP.Credits = { 
-    [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
-    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD", 
+    ["eft_trivia_author1"] = "Darsu", 
+    ["eft_trivia_assets2"] = "Battlestate Games LTD", 
 }
 
 SWEP.Slot = 4

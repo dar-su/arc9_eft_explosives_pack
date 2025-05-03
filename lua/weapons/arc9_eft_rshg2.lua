@@ -6,21 +6,18 @@ SWEP.NotForNPCs = true
 
 ------------------------- |||           Trivia            ||| -------------------------
 
-ARC9:AddPhrase("eft_weapon_rshg2", "RShG-2", "en")
-ARC9:AddPhrase("eft_weapon_rshg2", "РШГ-2", "ru")
-ARC9:AddPhrase("eft_weapon_rshg2", "WShhG-2", "uwu")
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_rshg2")
-SWEP.Description = [[RShG-2 - this thing hasn't been added to the game yet, despite being in patchnote and in game files.]]
+SWEP.Description = "eft_weapon_rshg2_desc"
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenadelauncher")
+SWEP.Class = "eft_class_weapon_grenadelauncher"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "GNPP «Basalt»",
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "72.5mm assault grenade",
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = "Single-use tube",
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_ru"),
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "2000"
+    ["eft_trivia_manuf1"] = "eft_trivia_manuf_npo",
+    ["eft_trivia_cal2"] = "eft_trivia_calibr_725heat",
+    ["eft_trivia_act3"] = "eft_trivia_act_singleuse",
+    ["eft_trivia_country4"] = "eft_trivia_country_rus",
+    ["eft_trivia_year5"] = "2000"
 }
 
 -- SWEP.StandardPresets = {

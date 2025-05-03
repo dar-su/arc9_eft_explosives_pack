@@ -4,9 +4,9 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M18 (Yellow)"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_smoke") or "Smoke grenade"
-SWEP.Description = [[The M18 smoke grenade made in the USA. Used in the US Army since the Second World War. The smoke is yellow-colored.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_m18_yellow")
+SWEP.Class = "eft_class_weapon_smoke" or "Smoke grenade"
+SWEP.Description = "eft_weapon_m18_yellow_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_m18_2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_m18_unthrowed.mdl"

@@ -5,8 +5,8 @@ SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_rgo") or "RGO"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenade") or "Hand grenade"
-SWEP.Description = [[RGO (Ruchnaya Granata Oboronitel'naya - "Defensive Hand Grenade") is a defensive anti-personnel fragmentation hand grenade of impact action.]]
+SWEP.Class = "eft_class_weapon_grenade" or "Hand grenade"
+SWEP.Description = "eft_weapon_rgo_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_rgn_rgo_2.mdl"
 SWEP.DefaultBodygroups = "10000000000000"

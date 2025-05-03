@@ -4,9 +4,9 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M67"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenade") or "Hand grenade"
-SWEP.Description = [[M67 Fragmentation Hand Grenade is an American hand grenade, designed for antipersonnel combat purposes and adopted in 1969 by the army of the United States.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_m67")
+SWEP.Class = "eft_class_weapon_grenade" or "Hand grenade"
+SWEP.Description = "eft_weapon_m67_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_m67_2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_m67_unthrowed.mdl"

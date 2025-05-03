@@ -4,9 +4,9 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M7290"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_flashbang") or "Flash Bang grenade"
-SWEP.Description = [[Model 7290 is a standard distracting explosive device. Produces 175 dB and a powerful light flash.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_m7290")
+SWEP.Class = "eft_class_weapon_flashbang" or "Flash Bang grenade"
+SWEP.Description = "eft_weapon_m7290_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_m7920_2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_m7920_unthrowed.mdl"

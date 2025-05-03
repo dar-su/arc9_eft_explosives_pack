@@ -4,9 +4,9 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "F-1"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenade") or "Hand grenade"
-SWEP.Description = [[The F-1 hand grenade (GRAU Index 57-G-721) is an anti-personnel fragmentation defensive grenade, designed for neutralizing enemy personnel in defensive combat. Due to a significantly effective fragmentation radius, it should only be thrown from behind hard cover, such as a concrete wall, APC, or tank.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_f1")
+SWEP.Class = "eft_class_weapon_grenade" or "Hand grenade"
+SWEP.Description = "eft_weapon_f1_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_f1_2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_f1_unthrowed.mdl"

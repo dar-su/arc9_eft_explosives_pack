@@ -5,10 +5,9 @@ SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_vog25") or "VOG-25 Khattabka"
--- SWEP.ShortPrintName = ARC9:GetPhrase("uplp_weapon_grenade_frag_short") or "VOG-25"
-SWEP.ShortPrintName = "VOG-25"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_improvised_grenade") or "Improvised hand grenade"
-SWEP.Description = [[The "Khattabka" hand-made hand grenade based on the VOG-25 grenade launcher shell. The grenade is a VOG-25 shell with a removed head part containing a detonator and self-destructor. A short fuse has been installed to speed up the ignition. An extremely deadly grenade.]]
+-- SWEP.ShortPrintName = "VOG-25"
+SWEP.Class = "eft_class_weapon_improvised_grenade" or "Improvised hand grenade"
+SWEP.Description = "eft_weapon_vog25_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_vog25_2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_vog25_unthrowed.mdl"

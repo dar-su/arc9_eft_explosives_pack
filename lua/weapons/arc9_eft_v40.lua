@@ -4,11 +4,10 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "V40 Mini-Grenade"
--- SWEP.ShortPrintName = ARC9:GetPhrase("uplp_weapon_grenade_frag_short") or "VOG-17"
-SWEP.ShortPrintName = "V40"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenade") or "Hand grenade"
-SWEP.Description = [[A Dutch fragmentation hand grenade. The grenade is the size of a standard golf ball and has a guaranteed lethal radius of only one meter.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_v40_full")
+SWEP.ShortPrintName = "eft_weapon_v40"
+SWEP.Class = "eft_class_weapon_grenade" or "Hand grenade"
+SWEP.Description = "eft_weapon_v40_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_v40.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_v40_unthrowed.mdl"
