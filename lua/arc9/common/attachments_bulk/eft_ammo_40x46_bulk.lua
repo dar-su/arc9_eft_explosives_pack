@@ -3,6 +3,7 @@ local ATT = {}
 local dmgrange = (GetConVar("arc9_eft_mindmgrange"):GetInt() or 1000)/1000
 local dmgrangesg = (GetConVar("arc9_eft_mindmgrange_sg"):GetInt() or 1000)/1000
 local mult1270 = GetConVar("arc9_eft_mult_shotgun"):GetFloat() or 0.5
+local multexplosive = GetConVar("arc9_eft_mult_explosive") and GetConVar("arc9_eft_mult_explosive"):GetFloat() or 1
 
 ///////////////////////////////////////      eft_ammo_40x46_m381
 ATT = {}
@@ -17,7 +18,7 @@ ATT.EFTRoundName2 = ARC9:GetPhrase("eft_ammo_40x46_m381.printname")
 ATT.HasGranataAmmo = true 
 
 ATT.CustomPros = {
-    ["autostat.explosiondamage"] = 199, 
+    ["autostat.explosiondamage"] = 199 * multexplosive, 
     ["autostat.explosionradius"] = "1-7 m", 
     ["Fuse time"] = "0.04 s"
 }
@@ -42,7 +43,7 @@ ATT.EFTRoundName2 = ARC9:GetPhrase("eft_ammo_40x46_m386.printname")
 ATT.HasGranataAmmo = true 
 
 ATT.CustomPros = {
-    ["autostat.explosiondamage"] = 199, 
+    ["autostat.explosiondamage"] = 199 * multexplosive, 
     ["autostat.explosionradius"] = "1-7 m", 
     ["Fuse time"] = "0.26 s"
 }
@@ -67,7 +68,7 @@ ATT.EFTRoundName2 = ARC9:GetPhrase("eft_ammo_40x46_m406.printname")
 ATT.HasGranataAmmo = true 
 
 ATT.CustomPros = {
-    ["autostat.explosiondamage"] = 199, 
+    ["autostat.explosiondamage"] = 199 * multexplosive, 
     ["autostat.explosionradius"] = "1-7 m", 
     ["Fuse time"] = "0.26 s"
 }
@@ -92,7 +93,7 @@ ATT.EFTRoundName2 = ARC9:GetPhrase("eft_ammo_40x46_m433.printname")
 ATT.HasGranataAmmo = true 
 
 ATT.CustomPros = {
-    ["autostat.explosiondamage"] = 199, 
+    ["autostat.explosiondamage"] = 199 * multexplosive, 
     ["autostat.explosionradius"] = "1-5 m", 
     ["Fuse time"] = "0.26 s"
 }
@@ -117,7 +118,7 @@ ATT.EFTRoundName2 = ARC9:GetPhrase("eft_ammo_40x46_m441.printname")
 ATT.HasGranataAmmo = true 
 
 ATT.CustomPros = {
-    ["autostat.explosiondamage"] = 199, 
+    ["autostat.explosiondamage"] = 199 * multexplosive, 
     ["autostat.explosionradius"] = "1-7 m", 
     ["Fuse time"] = "0.04 s"
 }

@@ -50,6 +50,8 @@ ENT.BounceSounds = { path .. "grenade_collision_concrete1.ogg", path .. "grenade
 
 ENT.ExplosionSounds = ""
 
+local multexplosive = GetConVar("arc9_eft_mult_explosive")
+
 local dirs = {
     Angle(-90, 90, 0), -- Up            angled by 15 degrees
     Angle(-75, 135, 0), -- Up right
@@ -169,7 +171,7 @@ function ENT:Detonate()
         if self.dmg > 1 then
             local radius = math.Rand(self.dmgradiusminM, self.dmgradiusmaxM) / 0.0254
 
-            util.BlastDamage(self, owner, selfpos, radius, self.dmg)
+            util.BlastDamage(self, owner, selfpos, radius, self.dmg * multexplosive:GetFloat())
             
             util.ScreenShake(selfpos, 32, 0.76, 2, self.shakeradiusM / 0.0254)
 
