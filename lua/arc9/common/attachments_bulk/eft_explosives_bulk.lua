@@ -334,8 +334,8 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_tripwire"}
 
 ATT.Firemodes = {
-    { Mode = 1, PrintName = "Throw" },
-    { Mode = 0, PrintName = "Tripwire" },
+    { Mode = 1, PrintName = ARC9:GetPhrase("eft_fmode_throw") },
+    { Mode = 0, PrintName = ARC9:GetPhrase("eft_fmode_tripwire") },
 }
 
 ATT.Hook_TranslateAnimation = function(wep, anim)
