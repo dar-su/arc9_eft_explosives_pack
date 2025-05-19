@@ -4,9 +4,9 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = ARC9:GetPhrase("eft_weapon_rdg2b") or "RDG-2B"
-SWEP.Class = "eft_class_weapon_smoke" or "Smoke grenade"
-SWEP.Description = "eft_weapon_rgd2b_desc"
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_rdg2b")
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_smoke")
+SWEP.Description = ARC9:GetPhrase("eft_weapon_rgd2b_desc")
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_rdg2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_rdg2_unthrowed.mdl"

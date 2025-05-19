@@ -6,9 +6,9 @@ SWEP.Spawnable = true
 ------------------------- |||           Trivia            ||| -------------------------
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_fn40gl")
-SWEP.Description = "eft_weapon_fn40gl_desc"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_fn40gl_desc")
 
-SWEP.Class = "eft_class_weapon_grenadelauncher" or "Grenade launcher"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenadelauncher")
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
 
 SWEP.Trivia = {
@@ -362,7 +362,7 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Grenade type",
+        PrintName = ARC9:GetPhrase("eft_cat_ammo"),
         Category = {"eft_ammo_40x46", "eft_ammo_40x46_nonubgl"},
         RejectAttachments = { ["eft_ammo_40x46_m576"] = true },
         Bone = "patron_in_weapon",
@@ -371,7 +371,7 @@ SWEP.Attachments = {
         Integral = "eft_ammo_40x46_m406",
     },
     {
-        PrintName = "Rear Sight",
+        PrintName = ARC9:GetPhrase("eft_cat_rearsight"),
         Bone = "weapon",
         Category = "eft_rearsight",
         Pos = Vector(0, 9.6, 1.05),
@@ -379,7 +379,7 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Optic",
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
         Bone = "mod_scope",
         Category = "eft_m2a1",
         ExcludeElements = {"IronsBlockingSight"},
@@ -388,7 +388,7 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Front Sight",
+        PrintName = ARC9:GetPhrase("eft_cat_frontsight"),
         Bone = "weapon",
         Category = "eft_frontsight",
         Pos = Vector(0, 21.9, 1.05),
@@ -396,7 +396,7 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Top Tactical",
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_u"),
         Category = {"eft_tactical_top"},
         Bone = "mod_tactical_000",
         Pos = Vector(0, 0, 0),
@@ -404,7 +404,7 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
-        PrintName = "R Tactical",
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_r"),
         Category = {"eft_tactical", "eft_tactical_top"},
         -- RejectAttachments = { ["eft_tactical_raptar"] = true },
         Bone = "mod_tactical_002",
@@ -413,7 +413,7 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
-        PrintName = "L Tactical",
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_l"),
         Category = {"eft_tactical", "eft_tactical_top"},
         -- RejectAttachments = { ["eft_tactical_raptar"] = true },
         Bone = "mod_tactical_001",
@@ -422,7 +422,7 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
-        PrintName = "Pistol grip",
+        PrintName = ARC9:GetPhrase("eft_cat_pgrip"),
         Category = {"eft_ar15_pgrip"},
         Installed = "eft_ar_pgrip_diecsfde",
         Bone = "mod_pistol_grip",
@@ -430,7 +430,7 @@ SWEP.Attachments = {
         Ang = Angle(0, -90, 0),
     },
     {
-        PrintName = "Custom slot",
+        PrintName = ARC9:GetPhrase("eft_cat_custom"),
         Category = {"eft_custom_slot", "eft_custom_fn40gl"},
         Bone = "weapon",
         Pos = Vector(0, 8, -2),

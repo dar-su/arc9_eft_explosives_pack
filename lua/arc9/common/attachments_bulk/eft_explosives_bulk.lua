@@ -51,7 +51,7 @@ ATT.Max = 1
 ATT.Category = {"eft_custom_slot_m32a1"}
 ATT.Attachments = {
     {
-        PrintName = "Custom slot",
+        PrintName = ARC9:GetPhrase("eft_cat_custom"),
         Pos = Vector(0, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = {"eft_custom_slot", "eft_custom_slot_m32a1", "eft_custom_slot_revolver"},
@@ -225,19 +225,19 @@ ATT.FoldSights = true
 
 ATT.Attachments = {
     {
-        PrintName = "Tactical L",
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_l"),
         Category = {"eft_tactical", "eft_tactical_top"},
         Pos = Vector(0, -1.12, -2.05),
         Ang = Angle(-3, 0, -90),
     },
     {
-        PrintName = "Tactical Top",
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_u"),
         Category = {"eft_tactical", "eft_tactical_top"},
         Pos = Vector(0, 0, -3.17),
         Ang = Angle(-3, 0, 0),
     },
     {
-        PrintName = "Tactical R",
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_r"),
         Category = {"eft_tactical", "eft_tactical_top"},
         Pos = Vector(0, 1.12, -2.05),
         Ang = Angle(-3, 0, 90),
@@ -307,7 +307,7 @@ ATT.Max = 1
 
 ATT.Attachments = {
     {
-        PrintName = "Custom slot",
+        PrintName = ARC9:GetPhrase("eft_cat_custom"),
         Pos = Vector(0, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = {"eft_custom_slot", "eft_custom_fn40gl"},

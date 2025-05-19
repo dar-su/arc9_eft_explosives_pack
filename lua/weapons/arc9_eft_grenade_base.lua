@@ -7,9 +7,9 @@ SWEP.NoDynamicKillIcon = true
 SWEP.NotForNPCs = true
 SWEP.EntitySelectIcon = true
 
-SWEP.PrintName = ARC9:GetPhrase("eft_weapon_rgd5") or "RGD-5"
-SWEP.Class = "eft_class_weapon_grenade" or "Hand grenade"
-SWEP.Description = "eft_weapon_rgd5_desc"
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_rgd5")
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenade")
+SWEP.Description = ARC9:GetPhrase("eft_weapon_rgd5_desc")
 SWEP.Credits = { 
     ["eft_trivia_author1"] = "Darsu", 
     ["eft_trivia_assets2"] = "Battlestate Games LTD", 
@@ -20,7 +20,7 @@ SWEP.Slot = 4
 SWEP.Firemodes = {
     {
         Mode = 1,
-        PrintName = "Throw"
+        PrintName = ARC9:GetPhrase("eft_fmode_throw")
     },
 }
 

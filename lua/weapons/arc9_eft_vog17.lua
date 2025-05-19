@@ -4,10 +4,10 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = ARC9:GetPhrase("eft_weapon_vog17") or "VOG-17 Khattabka"
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_vog17")
 -- SWEP.ShortPrintName = "VOG-17"
-SWEP.Class = "eft_class_weapon_improvised_grenade" or "Improvised hand grenade"
-SWEP.Description = "eft_weapon_vog17_desc"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_improvised_grenade")
+SWEP.Description = ARC9:GetPhrase("eft_weapon_vog17_desc")
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_vog17_2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_vog17_unthrowed.mdl"
@@ -167,7 +167,7 @@ SWEP.Animations = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Equipment",
+        PrintName = ARC9:GetPhrase("eft_cat_equipment"),
         Category = "eft_tripwire",
         Bone = "weapon_vog17",
         Pos = Vector(0, 0, 0),

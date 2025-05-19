@@ -6,8 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_v40_full")
 SWEP.ShortPrintName = "eft_weapon_v40"
-SWEP.Class = "eft_class_weapon_grenade" or "Hand grenade"
-SWEP.Description = "eft_weapon_v40_desc"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenade")
+SWEP.Description = ARC9:GetPhrase("eft_weapon_v40_desc")
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_v40.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_v40_unthrowed.mdl"
@@ -164,7 +164,7 @@ SWEP.Animations = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Equipment",
+        PrintName = ARC9:GetPhrase("eft_cat_equipment"),
         Category = "eft_tripwire",
         Bone = "weapon_grenade_v40",
         Pos = Vector(0, 0, 0),

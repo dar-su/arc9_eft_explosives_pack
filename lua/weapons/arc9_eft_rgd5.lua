@@ -4,9 +4,9 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = ARC9:GetPhrase("eft_weapon_rgd5") or "RGD-5"
-SWEP.Class = "eft_class_weapon_grenade" or "Hand grenade"
-SWEP.Description = "eft_weapon_rgd5_desc"
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_rgd5")
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenade")
+SWEP.Description = ARC9:GetPhrase("eft_weapon_rgd5_desc")
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_rgd5_2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_rgd5_unthrowed.mdl"
@@ -166,7 +166,7 @@ SWEP.Animations = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Equipment",
+        PrintName = ARC9:GetPhrase("eft_cat_equipment"),
         Category = "eft_tripwire",
         Bone = "weapon_rgd5",
         Pos = Vector(0, 0, 0),

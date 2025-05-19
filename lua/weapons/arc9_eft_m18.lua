@@ -5,8 +5,8 @@ SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_m18_green")
-SWEP.Class = "eft_class_weapon_smoke" or "Smoke grenade"
-SWEP.Description = "eft_weapon_m18_desc"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_smoke")
+SWEP.Description = ARC9:GetPhrase("eft_weapon_m18_desc")
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_m18_2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_m18_unthrowed.mdl"
@@ -165,7 +165,7 @@ SWEP.Animations = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Equipment",
+        PrintName = ARC9:GetPhrase("eft_cat_equipment"),
         Category = "eft_tripwire",
         Bone = "weapon_m18",
         Pos = Vector(0, 0, 0),

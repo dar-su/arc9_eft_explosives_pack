@@ -4,9 +4,9 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_grenades")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = ARC9:GetPhrase("eft_weapon_zarya") or "Zarya"
-SWEP.Class = "eft_class_weapon_stun" or "Stun grenade"
-SWEP.Description = "eft_weapon_zarya_desc"
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_zarya")
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_stun")
+SWEP.Description = ARC9:GetPhrase("eft_weapon_zarya_desc")
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_zarya_2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_zarya_unthrowed.mdl"
@@ -166,7 +166,7 @@ SWEP.Animations = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Equipment",
+        PrintName = ARC9:GetPhrase("eft_cat_equipment"),
         Category = "eft_tripwire",
         Bone = "weapon_zarya",
         Pos = Vector(0, 0, 0),
