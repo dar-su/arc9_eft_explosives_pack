@@ -43,7 +43,7 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         RareSource = "tooidle",
-        RareSourceChance = 0.0005
+        RareSourceChance = 0.005
     },
     -- ["idle_primed"] = {
     --     Source = "fire_idle",

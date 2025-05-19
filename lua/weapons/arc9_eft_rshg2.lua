@@ -212,9 +212,7 @@ local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.ogg","arc9_eft_sha
 
 SWEP.Animations = {
     ["idle"] = { 
-        Source = "idle", 
-
-        -- Time = 100,       -- REMOVE TIME !!!!!!!!
+        Source = "idle",
     },
 
     ["idle_sights"] = { Source = "idle_sights" },
