@@ -63,6 +63,8 @@ SWEP.Firemodes = { { Mode = 1 } }
 
 SWEP.Slot = 4
 
+SWEP.ReloadInSights = false
+
 SWEP.ShootEnt = "arc9_eft_40mm_m433_bang"
 SWEP.ShootEntForce = 4000
 SWEP.ShootEntHook = function(swep, old) return swep:GetValue("ShootEntUBGL") end -- bleh bleh those rounds for ubgl only
@@ -216,6 +218,7 @@ local function spindelay(swep) -- setting nwint not in start of anim but while o
 end
 
 SWEP.EFT_HasTacReloads = true 
+SWEP.EFT_HasTacReloadsAlways = true
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
@@ -231,15 +234,14 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         local inspect = swep.EFTInspectBool
 
         if !inspect then
-            if ARC9EFTBASE and SERVER then
+            if SERVER then
                 net.Start("arc9eftmagcheck")
                 net.WriteBool(true) -- accurate or not based on mag type
                 net.WriteUInt(math.min(clip , swep:GetMaxClip1())+1, 9)
                 net.WriteUInt(swep:GetCapacity(), 9)
                 net.Send(swep:GetOwner())
-
-                return "mag_check__" .. cylrot
             end
+            return "mag_check__" .. cylrot
         else
             return "look__" .. cylrot
         end
