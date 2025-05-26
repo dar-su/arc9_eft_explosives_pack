@@ -880,6 +880,11 @@ SWEP.Animations = {
     ["sg_reload_start_empty1__5"] = { Source = "sg_reload_start_empty__5", EventTable = sg_estart5_1, NoMagSwap = true, IKTimeLine = rstartlhik},
 
 
+    ["inspect"] = { -- shutup arc9 we have inspect
+        Source = "idle",
+        Time = 0.05,
+    },
+    
     ["look__0"] = { Source = "look__0", MinProgress = 0.95, FireASAP = true, EventTable = look, IKTimeLine = looklhik },
     ["look__1"] = { Source = "look__1", MinProgress = 0.95, FireASAP = true, EventTable = look, IKTimeLine = looklhik },
     ["look__2"] = { Source = "look__2", MinProgress = 0.95, FireASAP = true, EventTable = look, IKTimeLine = looklhik },
