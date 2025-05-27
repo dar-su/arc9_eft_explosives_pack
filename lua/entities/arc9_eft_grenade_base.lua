@@ -164,7 +164,7 @@ function ENT:Detonate()
             util.BlastDamage(self, owner, selfpos, 512, 300)
         end
 
-        self:EmitSound(self.watersound, 100)
+        self:EmitSound(self.watersound, 100, _, _, _, _, _, _, _, ARC9.EveryoneRecipientFilter)
     else
         ParticleEffect(self.particle, selfpos, Angle(0, 0, 0), nil)
 
@@ -183,7 +183,7 @@ function ENT:Detonate()
             self:EmitSound(self.closeIndoorSound, 140, 100, 10, nil, nil, 0) -- Louder!!!!!
             self:EmitSound(self.closeIndoorSound, 140, 100, 10, nil, nil, 0) -- Louder!!!!!
 
-            self:EmitSound(self.distantIndoorSound, 0, 100, 0.5, nil, nil, 0)
+            self:EmitSound(self.distantIndoorSound, 0, 100, 0.5, nil, nil, 0, ARC9.EveryoneRecipientFilter)
 
         else
             self:EmitSound(self.closeSound, 140, 100, 10, nil, nil, 0)
@@ -191,7 +191,7 @@ function ENT:Detonate()
             self:EmitSound(self.closeSound, 140, 100, 10, nil, nil, 0) -- Louder!!!!!
             
             -- self:EmitSound(path .. "gren_expl1_distant.ogg", 250, nil, nil, nil, nil, 0)
-            self:EmitSound(self.distantSound, 0, 100, 0.5, nil, nil, 0)
+            self:EmitSound(self.distantSound, 0, 100, 0.5, nil, nil, 0, ARC9.EveryoneRecipientFilter)
         end 
 
 
