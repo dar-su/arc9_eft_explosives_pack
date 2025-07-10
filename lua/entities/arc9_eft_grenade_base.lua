@@ -164,7 +164,7 @@ function ENT:Detonate()
             util.BlastDamage(self, owner, selfpos, 512, 300)
         end
 
-        self:EmitSound(self.watersound, 100, _, _, _, _, _, _, _, ARC9.EveryoneRecipientFilter)
+        self:EmitSound(self.watersound, 100, _, _, _, _, _, ARC9.EveryoneRecipientFilter)
     else
         ParticleEffect(self.particle, selfpos, Angle(0, 0, 0), nil)
 
