@@ -9,7 +9,6 @@ ATT.Cons = {}
 ATT.SortOrder = 0
 
 ATT.EFTErgoAdd = -35
-ATT.CustomCons = { Ergonomics = "-35" }
 ATT.RecoilMult = 0.92
 ATT.VisualRecoilMult = 0.92
 
@@ -267,7 +266,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_ak_gp34"}
 
 ATT.EFTErgoAdd = -35
-ATT.CustomCons = { Ergonomics = "-35" }
 ATT.RecoilMult = 0.92
 ATT.VisualRecoilMult = 0.92
 
@@ -363,7 +361,6 @@ ATT.ExcludeElements = {
 
 
 ATT.EFTErgoAdd = -41
-ATT.CustomCons = { Ergonomics = "-41" }
 ATT.RecoilMult = 0.9
 ATT.VisualRecoilMult = 0.9
 

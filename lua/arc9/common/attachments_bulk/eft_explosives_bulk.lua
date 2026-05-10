@@ -11,7 +11,6 @@ ATT.Icon = Material("entities/eft_m32_attachments/cyl.png", "mips smooth")
 ATT.Description = [[A standard-issue cylinder for the M32A1 MSGL revolver grenade launcher.]]
 
 ATT.EFTErgoAdd = -10
-ATT.CustomCons = { Ergonomics = "-10" }
 ATT.RecoilMult = 0.99
 ATT.VisualRecoilMult = 0.99
 
@@ -82,7 +81,6 @@ ATT.Category = {"eft_m2a1"}
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -6
-ATT.CustomCons = { Ergonomics = "-6" }
 
 ATT.FoldSights = true
 
@@ -222,7 +220,6 @@ ATT.Category = {"eft_m2a1"}
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -6
-ATT.CustomCons = { Ergonomics = "-6" }
 
 ATT.FoldSights = true
 
