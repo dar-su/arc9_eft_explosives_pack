@@ -24,6 +24,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_m32a1_mag"}
 
+-- EFT ID: 627bce33f21bc425b06ab967
 ARC9.LoadAttachment(ATT, "eft_m32a1_mag_std")
 
 
@@ -58,6 +59,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: NO
 ARC9.LoadAttachment(ATT, "eft_m32a1_black")
 
 
@@ -194,6 +196,7 @@ ATT.DrawFunc = function(swep, model)
 end
 
 
+-- EFT ID: 6284bd5f95250a29bc628a30
 ARC9.LoadAttachment(ATT, "eft_optic_m2a1")
 
 
@@ -281,6 +284,7 @@ ATT.DrawFunc = function(swep, model)
 end
 
 
+-- EFT ID: 6284bd5f95250a29bc628a30
 ARC9.LoadAttachment(ATT, "eft_optic_m2a1_atts")
 
 ///////////////////////////////////////      eft_fn40_black     NOT MADE BY DARSU
@@ -315,6 +319,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: NO
 ARC9.LoadAttachment(ATT, "eft_fn40_black")
 
 
@@ -342,4 +347,5 @@ ATT.Hook_TranslateAnimation = function(wep, anim)
     if wep:GetFiremode() == 2 then return anim .. "_mine" end
 end
 
+-- EFT ID: 666b11055a706400b717cfa5
 ARC9.LoadAttachment(ATT, "eft_grenade_tripwire")

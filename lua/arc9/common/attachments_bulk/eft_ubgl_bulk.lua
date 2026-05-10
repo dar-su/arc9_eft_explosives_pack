@@ -318,6 +318,7 @@ ATT.DropMagazineAmountUBGL = 0
 
 ATT.MuzzleParticleUBGL = "muzzleflash_m79"
 
+-- EFT ID: NO
 ARC9.LoadAttachment(ATT, "eft_gp34")
 
 
@@ -343,41 +344,23 @@ ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 
+ATT.RequireElements = {"eft_m203_allowed"}
+
 ATT.ExcludeElements = {
     "eft_hg_ar15_m4_lower",
     "eft_hg_ar15_ddrisii1225_lower",
     "eft_hg_ar15_ddrisii95_lower",
     "eft_hg_ar15_ddrisii95_lower_b",
-    "eft_hg_ar15_ddfsp",
     "eft_hg_ar15_kacris_lower",
     "eft_hg_ar15_kacurx31_lower",
     "eft_hg_ar15_kacurx38_lower",
     "eft_hg_ar15_viper_lower",
     "eft_hg_ar15_viper_lower_fde",
-    "eft_hg_ar15_mk16",
-    "eft_hg_ar15_mk1695",
-    "eft_hg_ar15_ionlite",
-    "eft_hg_ar15_moesl",
-    "eft_hg_ar15_moeslmid",
-    "eft_hg_ar15_saiqd10",
-    "eft_hg_ar15_saiqd",
-    "eft_hg_ar15_stm15",
-    "eft_hg_ar15_stm12",
-    "eft_hg_ar15_stm9",
-    "eft_hg_ar15_vypr",
-    "eft_hg_ar15_wing",
-    "eft_hg_ar15_lvoac_b",
-    "eft_hg_ar15_lvoac_f",
-    "eft_hg_ar15_lvoac_g",
-    "eft_hg_ar15_lvoas_b",
-    "eft_hg_ar15_lvoas_f",
-    "eft_hg_ar15_lvoas_g",
-    "eft_hg_ar15_mk10",
-    "eft_hg_ar15_ax15",
-    "eft_hg_ar15_adar",
-    "eft_hg_ar15_precision",
-    "eft_mag_ar15_pmag_60",
+    "eft_barrel_ar15_18i_mk12",
+    "barrel_10i",
+
 }
+
 
 ATT.EFTErgoAdd = -41
 ATT.CustomCons = { Ergonomics = "-41" }

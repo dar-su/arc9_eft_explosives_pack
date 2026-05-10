@@ -28,6 +28,7 @@ ATT.ShootEntUBGL = "arc9_eft_40mm_m381_bang"
 
 ATT.Category = {"eft_ammo_40x46"}
 
+-- EFT ID: 5ede474b0c226a66f5402622
 ARC9.LoadAttachment(ATT, "eft_ammo_40x46_m381")
 
 ///////////////////////////////////////      eft_ammo_40x46_m386
@@ -53,6 +54,7 @@ ATT.ShootEntUBGL = "arc9_eft_40mm_m386_bang"
 
 ATT.Category = {"eft_ammo_40x46"}
 
+-- EFT ID: 5ede475b549eed7c6d5c18fb
 ARC9.LoadAttachment(ATT, "eft_ammo_40x46_m386")
 
 ///////////////////////////////////////      eft_ammo_40x46_m406
@@ -78,6 +80,7 @@ ATT.ShootEntUBGL = "arc9_eft_40mm_m406_bang"
 
 ATT.Category = {"eft_ammo_40x46"}
 
+-- EFT ID: 5ede4739e0350d05467f73e8
 ARC9.LoadAttachment(ATT, "eft_ammo_40x46_m406")
 
 ///////////////////////////////////////      eft_ammo_40x46_m433
@@ -103,6 +106,7 @@ ATT.ShootEntUBGL = "arc9_eft_40mm_m433_bang"
 
 ATT.Category = {"eft_ammo_40x46"}
 
+-- EFT ID: 5f0c892565703e5c461894e9
 ARC9.LoadAttachment(ATT, "eft_ammo_40x46_m433")
 
 ///////////////////////////////////////      eft_ammo_40x46_m441
@@ -128,6 +132,7 @@ ATT.ShootEntUBGL = "arc9_eft_40mm_m441_bang"
 
 ATT.Category = {"eft_ammo_40x46"}
 
+-- EFT ID: 5ede47405b097655935d7d16
 ARC9.LoadAttachment(ATT, "eft_ammo_40x46_m441")
 
 ///////////////////////////////////////      eft_ammo_40x46_m576
@@ -162,6 +167,7 @@ ATT.ShootEntUBGL = false
 
 ATT.Category = {"eft_ammo_40x46"}
 
+-- EFT ID: 5ede475339ee016e8c534742
 ARC9.LoadAttachment(ATT, "eft_ammo_40x46_m576")
 
 ///////////////////////////////////////      eft_ammo_40x46_m576_nonubgl -- shh dont tell anybody!
@@ -203,5 +209,6 @@ ATT.ShootEnt = false
 
 ATT.Category = {"eft_ammo_40x46_nonubgl"}
 
+-- EFT ID: 5ede475339ee016e8c534742
 ARC9.LoadAttachment(ATT, "eft_ammo_40x46_m576_nonubgl")
 
