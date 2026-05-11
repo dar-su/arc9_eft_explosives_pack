@@ -57,6 +57,7 @@ SWEP.CustomizeSnapshotFOV = 95
 SWEP.Spread = 24.06 * ARC9.MOAToAcc
 SWEP.RPM = 134
 SWEP.EFTErgo = 30
+SWEP.EFTWeight = 3.3
 SWEP.BarrelLength = 35
 SWEP.Ammo = "smg1_grenade" -- What ammo type this gun uses.
 SWEP.Firemodes = { { Mode = 1 } }

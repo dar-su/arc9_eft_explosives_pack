@@ -66,6 +66,7 @@ SWEP.CustomizeRotateAnchor = Vector(18.2, -4.25, -3.7)
 SWEP.Spread = 3.0 * ARC9.MOAToAcc
 SWEP.RPM = 666
 SWEP.EFTErgo = 0
+SWEP.EFTWeight = 3.77 + 0.23
 SWEP.AimDownSightsTime = 1.0
 SWEP.AimDownSightsTimeHook = false
 SWEP.BarrelLength = 75
