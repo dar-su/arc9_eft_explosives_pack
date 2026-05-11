@@ -1,5 +1,7 @@
 local ATT = {}
 
+ATT = {}
+
 ATT.PrintName = [[GP-25 "Kostyor" 40mm underbarrel grenade launcher]]
 ATT.CompactName = [[GP-25]]
 ATT.Icon = Material("entities/eft_ak_attachments/gp25real.png", "mips smooth")
@@ -8,9 +10,9 @@ ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 
-ATT.EFTErgoAdd = -35
-ATT.RecoilMult = 0.92
-ATT.VisualRecoilMult = 0.92
+-- ATT.EFTErgoAdd = -35
+-- ATT.RecoilMult = 0.92
+-- ATT.VisualRecoilMult = 0.92
 
 ATT.ReloadInSightsUBGL = false 
 
@@ -234,12 +236,15 @@ end
 
 ATT.UBGLExclusiveSightsUBGL = true
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -35,
+    recoilModifier = -8,
+    weight = 1.4,
+}))
+
+
+-- EFT ID: 62e7e7bbe6da9612f743f1e0
 ARC9.LoadAttachment(ATT, "eft_gp25")
-
-
-
-
-
 
 
 
@@ -316,6 +321,14 @@ ATT.DropMagazineAmountUBGL = 0
 
 ATT.MuzzleParticleUBGL = "muzzleflash_m79"
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -35,
+    recoilModifier = -8,
+    weight = 1.4,
+}))
+
+
+-- meh 62e7e7bbe6da9612f743f1e0
 -- EFT ID: NO
 ARC9.LoadAttachment(ATT, "eft_gp34")
 
@@ -360,9 +373,9 @@ ATT.ExcludeElements = {
 }
 
 
-ATT.EFTErgoAdd = -41
-ATT.RecoilMult = 0.9
-ATT.VisualRecoilMult = 0.9
+-- ATT.EFTErgoAdd = -41
+-- ATT.RecoilMult = 0.9
+-- ATT.VisualRecoilMult = 0.9
 
 ATT.ReloadInSightsUBGL = false 
 
@@ -544,6 +557,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -41,
+    recoilModifier = -10,
+    weight = 1.36,
+}))
+-- EFT ID: 6357c98711fb55120211f7e1
 ARC9.LoadAttachment(ATT, "eft_m203")
 
 

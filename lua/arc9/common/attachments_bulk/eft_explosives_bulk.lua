@@ -10,10 +10,6 @@ ATT.CompactName = "M32A1 cyl."
 ATT.Icon = Material("entities/eft_m32_attachments/cyl.png", "mips smooth")
 ATT.Description = [[A standard-issue cylinder for the M32A1 MSGL revolver grenade launcher.]]
 
-ATT.EFTErgoAdd = -10
-ATT.RecoilMult = 0.99
-ATT.VisualRecoilMult = 0.99
-
 ATT.ClipSize = 6
 
 ATT.HasMag = true 
@@ -22,6 +18,13 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_m32a1_mag"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -10,
+    recoilModifier = -1,
+    weight = 0.8,
+}))
+
 
 -- EFT ID: 627bce33f21bc425b06ab967
 ARC9.LoadAttachment(ATT, "eft_m32a1_mag_std")
@@ -79,8 +82,6 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/sight_m2a1.mdl"
 
 ATT.Category = {"eft_m2a1"}
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
-ATT.EFTErgoAdd = -6
 
 ATT.FoldSights = true
 
@@ -194,6 +195,12 @@ ATT.DrawFunc = function(swep, model)
 end
 
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -6,
+    weight = 0.6,
+}))
+
+
 -- EFT ID: 6284bd5f95250a29bc628a30
 ARC9.LoadAttachment(ATT, "eft_optic_m2a1")
 
@@ -218,9 +225,6 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/sight_m2a1.mdl"
 
 ATT.Category = {"eft_m2a1"}
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
-ATT.EFTErgoAdd = -6
-
 ATT.FoldSights = true
 
 ATT.Attachments = {
@@ -279,6 +283,12 @@ ATT.DrawFunc = function(swep, model)
     -- model:SetPoseParameter("zeroing", 0)
     model.FakeHolosightAngleOffset = funnyang
 end
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -6,
+    weight = 0.6,
+}))
 
 
 -- EFT ID: 6284bd5f95250a29bc628a30
@@ -344,5 +354,5 @@ ATT.Hook_TranslateAnimation = function(wep, anim)
     if wep:GetFiremode() == 2 then return anim .. "_mine" end
 end
 
--- EFT ID: 666b11055a706400b717cfa5
+-- EFT ID: NO
 ARC9.LoadAttachment(ATT, "eft_grenade_tripwire")
