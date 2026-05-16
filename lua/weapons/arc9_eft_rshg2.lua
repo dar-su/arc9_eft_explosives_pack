@@ -175,6 +175,7 @@ SWEP.DropMagazinePos = Vector(0, 0, 0)
 SWEP.DropMagazineAng = Angle(-180, 90, 0)
 SWEP.DropMagazineVelocity = Vector(0, 33, 0)
 SWEP.DropMagazineModel = "models/weapons/arc9/darsu_eft/w_rshg2_dropped.mdl"
+SWEP.DropMagazineEffect = "arc9_magdropeffect"
 
 ------------------------- |||           Animations            ||| -------------------------
 
