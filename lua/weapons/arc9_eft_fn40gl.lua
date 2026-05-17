@@ -183,7 +183,7 @@ SWEP.DropMagazinePos = Vector(0, 0, 0)
 SWEP.DropMagazineAng = Angle(90, 180, 90)
 SWEP.DropMagazineVelocity = Vector(0, 40, 20)
 SWEP.DropMagazineSounds = ARC9EFT.ShellsHeavy
-SWEP.DropMagazine = "arc9_eft_magdropeffect"
+SWEP.DropMagazineEffect = "arc9_eft_magdropeffect"
 
 ------------------------- |||           Animations            ||| -------------------------
 
