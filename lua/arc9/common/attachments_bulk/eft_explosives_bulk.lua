@@ -86,7 +86,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.FoldSights = true
 
 ATT.HoloSight = true
-ATT.HoloSightReticle = Material("entities/m2a1/scope_all_milkor_m2a1_reflex_sight_mark.png", "mips smooth")
+ATT.HoloSightReticle = Material("entities/m2a1/scope_all_milkor_m2a1_reflex_sight_mark.png", "smooth")
 ATT.HoloSightReticle:SetInt("$flags", bit.bor(ATT.HoloSightReticle:GetInt("$flags"), 128)) -- additive
 -- ATT.HoloSightReticle:SetVector("$color2", Vector(1, 1, 1)) -- bright color
 ATT.HoloSightSize = 465
@@ -249,7 +249,7 @@ ATT.Attachments = {
 }
 
 ATT.HoloSight = true
-ATT.HoloSightReticle = Material("entities/m2a1/scope_all_milkor_m2a1_reflex_sight_mark.png", "mips smooth")
+ATT.HoloSightReticle = Material("entities/m2a1/scope_all_milkor_m2a1_reflex_sight_mark.png", "smooth")
 ATT.HoloSightReticle:SetInt("$additive", 1)
 ATT.HoloSightSize = 465
 ATT.HoloSightColorable = false
