@@ -9,7 +9,7 @@ ENT.Spawnable 			= false
 ENT.PrintName  = "VOG-25 Projectile"
 ENT.Model = "models/weapons/arc9/darsu_eft/vog25.mdl"
 -- ENT.LifeTime = 0.3
-ENT.LifeTime = 3.5
+ENT.LifeTime = 13.5
 
 ENT.dmg = 199
 ENT.dmgradiusminM = 1 * 2
