@@ -392,10 +392,57 @@ ATT.LHIK = true
 ATT.LHIK_Priority = 100
 
 ATT.MuzzleDeviceUBGL = true
-ATT.DropMagazineAmountUBGL = 0
+
+ATT.DropMagazineAmountUBGL = 1
+-- ATT.DropMagazineModelUBGL = "models/weapons/arc9/darsu_eft/shells/40x46_m716.mdl"
+ATT.DropMagazineTimeUBGL = 27/24
+ATT.DropMagazinePosUBGL = Vector(22, 0, 5)
+ATT.ShouldDropMagUBGL = true
+-- ATT.DropMagazineQCAUBGL = 2
+ATT.DropMagazineVelocityUBGL = Vector(40, 0, 0)
+ATT.DropMagazineAngUBGL = Angle(180, 0, 0)
+ATT.DropMagazineSoundsUBGL = ARC9EFT.ShellsHeavy
+
+
+
+local aaaaaa = {
+    ["eft_ammo_40x46_m381"]    = "models/weapons/arc9/darsu_eft/shells/40x46_m381.mdl",
+    ["eft_ammo_40x46_m386"]    = "models/weapons/arc9/darsu_eft/shells/40x46_m386.mdl",
+    ["eft_ammo_40x46_m406"]    = "models/weapons/arc9/darsu_eft/shells/40x46_m406.mdl",
+    ["eft_ammo_40x46_m441"]    = "models/weapons/arc9/darsu_eft/shells/40x46_m441.mdl",
+    ["eft_ammo_40x46_m576"]    = "models/weapons/arc9/darsu_eft/shells/40x46_m576.mdl",
+    ["eft_ammo_40x46_m576_nonubgl"]    = "models/weapons/arc9/darsu_eft/shells/40x46_m576.mdl",
+    ["eft_ammo_40x46_m716"]    = "models/weapons/arc9/darsu_eft/shells/40x46_m716.mdl",
+    ["eft_ammo_40x46_m433"]    = "models/weapons/arc9/darsu_eft/shells/40x46_m433.mdl",
+}
+
+ATT.DropMagazineModelHook = function(swep, old)
+    if swep:GetUBGL() then
+        local elements = swep:GetElements()
+        for k, v in pairs(aaaaaa) do
+            if elements[k] then return v end 
+        end
+    end
+end
+
 
 local path = "weapons/darsu_eft/m203/"
 local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.ogg","arc9_eft_shared/weapon_generic_rifle_spin2.ogg","arc9_eft_shared/weapon_generic_rifle_spin3.ogg","arc9_eft_shared/weapon_generic_rifle_spin4.ogg","arc9_eft_shared/weapon_generic_rifle_spin5.ogg","arc9_eft_shared/weapon_generic_rifle_spin6.ogg","arc9_eft_shared/weapon_generic_rifle_spin7.ogg","arc9_eft_shared/weapon_generic_rifle_spin8.ogg","arc9_eft_shared/weapon_generic_rifle_spin9.ogg","arc9_eft_shared/weapon_generic_rifle_spin10.ogg"}
+
+
+local ReloadPoseParameterTables = { -- using this cuz its quite unused free nwint (regular ReloadHideBoneTables interfers with base weapon hidden bones)
+    [6] = {},
+    [7] = { -- 6 7
+        "shellport",
+    },
+    [8] = {
+        "patron_in_weapon",
+    },
+    [9] = {
+        "shellport",
+        "patron_in_weapon",
+    },
+}
 
 
 ATT.IKAnimationProxy = {
@@ -422,7 +469,11 @@ ATT.IKAnimationProxy = {
             { s = path .. "m203_hand_on_tube.ogg", t = 68/24 },
             { s = path .. "m203_tube_close_full.ogg", t = 71/24 },
             { s = path .. "m203_hand_out_tube.ogg", t = 76/24 },
-            -- { s = randspin, t = 1.7 },
+
+            {ppi = 8, t = 0},
+            {ppi = 9, t = 27/24},
+            {ppi = 7, t = 40/24},
+            -- {ppi = 6, t = 76/24},
         }
     },
     ["enter_ubgl"] = {
@@ -532,6 +583,23 @@ ATT.ModelAngleOffset = Angle(0, 180, 0)
 
 -- ATT.UBGLExclusiveSightsUBGL = true
 
+local v0 = Vector(0, 0, 0)
+local v1 = Vector(1, 1, 1)
+
+local function getHiddenBones2(self)
+    local bones = {}
+    local index = self:GetPoseParameterIndex()
+    local reloadhidebones = index != 0 and ReloadPoseParameterTables
+
+    if reloadhidebones and reloadhidebones[index] then
+        for _, bone in ipairs(reloadhidebones[index]) do
+            bones[bone] = true
+        end
+    end
+
+    return bones
+end
+
 ATT.DrawFunc = function(swep, model) 
     local eles = swep:GetElements()
 
@@ -544,7 +612,28 @@ ATT.DrawFunc = function(swep, model)
     or eles["eft_ammo_40x46_m716"] and 7
     or 0
 
-    model:SetBodygroup(1, bg) 
+    model:SetBodygroup(1, bg)
+
+
+    if !swep:GetUBGL() then return end
+
+    local hidebones = getHiddenBones2(swep)
+
+    for k, v in pairs({"patron_in_weapon", "shellport"}) do
+        k = model:LookupBone(v)
+        if k then model:ManipulateBoneScale(k, v1) end
+    end
+
+    if !table.IsEmpty(hidebones) then
+        for bone, enabled in pairs(hidebones) do
+            if enabled then
+                local boneid = isnumber(bone) and bone or model:LookupBone(bone)
+                if boneid then
+                    model:ManipulateBoneScale(boneid, v0)
+                end
+            end
+        end
+    end
 end
 
 ATT.Attachments = {
