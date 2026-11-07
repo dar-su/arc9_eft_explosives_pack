@@ -368,6 +368,10 @@ ATT.ExcludeElements = {
     "eft_hg_ar15_viper_lower",
     "eft_hg_ar15_viper_lower_fde",
     "eft_barrel_ar15_18i_mk12",
+    "eft_hg_ar15_dd_iii_95_lower",
+    "eft_hg_ar15_dd_iii_95_lower_fde",
+    "eft_hg_ar15_dd_iii_lower",
+    "eft_hg_ar15_dd_iii_lower_fde",
     "barrel_10i",
 
 }
